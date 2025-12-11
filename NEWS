@@ -1,1430 +1,992 @@
-Version 1.9.2 RC 2
-~~~~~~~~~~~~~~~~~~~~
-Released: 2025-11-27
-
-Features:
-* #7821 2-digit years are interpreted as the first century, instead of being in the closest century
-* #7758 Allow Finance/Yahoo cookie and crumb to be reset
-* #7724 [Bug] Transaction list sorting by Date column is broken and can cause application crash (v1.9.1/1.9.2)
-* #7308 Allow toolbar color to be customized
-* #6771 Avoiding duplicate entries on CSV Import
-* #3710 OFX import/export support
-* #7781 Enhanced and refactored General Report Manager
-* #7803 Pull in latest version of GRM reports
-* #7819 Payee manager enhancements
-* #7818 Bugfix and transaction dialog enhancements
-* #7911 Updated documentation: expanded Tags section, added screenshots and GIFs
-* #7913 Documentation Update: Complete rewrite of the Tags section with images and GIF + Improved translation: Adding Initial Shares to Stock
-* #7824 Fix Arch Linux support
-
-Bugfixes:
-* #7863 error occurred when saving the transaction
-* #7851 Budget overview issue
-* #7847 Crash updating Payees
-* #7807 Reports/Categories/Where the money goes totals incorrect
-* #7780 App crash on click on specific Stock Portfolio name after changing of sort order
-* #7765 Reporting Start and End date issues
-* #7761 CSV Import - Custom Fields Fail to Populate
-* #7745 Save and Save and New has the same keyboard shortcut
-* #7742 MacOS random crashes on exit
-* #7737 MMEX crashes - stock portfolio account closed
-* #7736 Default Stock URL should be: finance.yahoo.com/quote/%s
-* #7710 v1.9.1 Crash on opening when it auto attempts to import WebApp transactions
-* #7700 MMEX crashes after clicking on Stock Portfolios
-* #7692 SOLVED (but please recheck) v1.9.1: Assertion before graphic "Summary", "Where the Money Goes/Comes From"
-* #7688 Base currency in reports is not displayed
-* #7562 AppImage build failure... github.com/AppImageCrafters/appimage-builder/issues/375
-* #6868 Please allow `Now` to be translated and to work with localized versions of MMEX
-* #6462 Notes are duplicated for some split transactions
-* #6233 All Transactions view - Selected Transactions Amount
-* #6128 Please set the default `Symbol Location` = `Suffix` for `Currency Code` = `HUF`
-* #7793 Fixed sorting of investment accounts in stocks widget
-* #7830 Refactor setting dialog static box assignments and remove double list refresh
-* #7829 Derive accelerator key from (translated) tooltip text
-* #7694 The New Database Wizard window is extremely wide
-* #7914 Misc fixes
-* #7916 Fix missing images and improve Tags documentation (en_US + it_IT)
-
-Version 1.9.1
-~~~~~~~~~~~~~~~~~~~~
-Released: 2025-09-12
-
-Features:
-* #7334 Copy sum on click
-* #7606 Enhancement: Replace bulk transation setting option with dedicated button in transaction dialog
-* #7605 Enhancement: Combine transaction related settings in dedicated panel
-* #7604 Enhancement: Context menu option to move columns to beginning/end
-* #7588 Enhancement: Use default status after copy/paste or duplicate
-* #7577 Feature: Unified date range handling
-* #7567 1.9.1 Beta Juli 23 Homepage is displayed incorrectly
-* #7559 Enhancement: Show total in stock transaction list
-* #7558 Feature: Show stock list instead of help page in Stock portfolios
-* #7557 Feature: Emphasize not reconciled transactions
-* #7539 Improved German translation - removed warnings - small fixes
-* #7530 wxWidgets 3.3.0 (now 3.3.1)
-* #7468 Last 1.9.1 Beta doesn't run on Linux
-* #7467 wxWidgets 3.2.8
-* #7445 Warning when re-opening MMEX after a system restart
-* #7441 wxWidgets 3.x STL BUILD
-* #7372 wxWidgets 3.2.7
-* #7363 Self Transfer as Revaluation
-* #7247 Refactor translation macros
-* #7190 Dashboard: No red in negative amounts and Histogram dissappeared
-* #7150 Refine date ranges in transaction panels
-* #6882 c++17
-* #5124 Update Windows wxWebView to use wxWEBVIEW_BACKEND_EDGE backend
-* #1628 Model_Attachment::REFTYPE_CHOICES
-
-Bugfixes:
-* #7668 Wrong date range on "Category Income/Expenses - 12 month" report
-* #7663 Future transactions not displayed if > 30 days after end of unbounded range end
-* #7580 Bug: New splits are not added in the split transaction dialog
-* #7568 Transaction form invisible
-* #7546 If you edit a scheduled payment and cancel the attachment, it disappears.
-* #7532 changing budget selection in budget reports has no effect
-* #7485 wxWidgets debug alert triggers when viewing stock panel
-* #7465 System crash deleting quote from historic view of a title
-* #7451 You must use int64 for History Id retrieved from List (otherwise it could be a negative value and lead to memory exception)
-* #7392 Report on new sub-category not showing correct result
-* #7296 MMEX crashes when selecting a specific credit card account
-* #7292 Three languages are not sorted and shown like the other languages
-* #7277 Strange Symbols Appearing in Transaction Date Filters (1.9.1 Beta1)
-* #7272 MMEX crashes when filtering on custom field only in transation report
-* #7271 Transaction Report -> link to transactions broken
-* #7235 Change ending date for Monthly Category report?
-* #7229 Error on using the credit limit feature
-* #7220 Transaction Report crash if tags are selected
-* #7210 Manuually entering the same new tag in Split Transactions will cause a Constraint error
-* #7204 AppVeyor compile errors when building with wxWidgets 3.3.0
-* #7195 Creating scheduled transaction of X days
-* #7194 QIF File import error after updating to 1.9.0
-* #7192 MMEX 1.9.0: MMEX CSV export not working properly
-* #7174 SUID with unique timestamp in milliseconds
-* #6949 Q instead of ctrl+q closes the program
-* #6898 Drop-down list: 1. Remove colon `:`; 2. Replace colon `:` with 1-character ellipsis `…`
-* #5196 Poor icon rendering for different DPIs using wxGenericTreeCtrl
-* #2891 Locked transaction
-
-Version 1.9.0
-~~~~~~~~~~~~~~~~~~~~
-Released: 2025-02-07
-
-Features:
-* #7136 Difficulty to revert from 1.9.0 to 1.8.1
-* #7131 Balance column gets unreliable when changing the sorting columns
-* #7122 The computing of appreciation/depreciation of assets isn't exact
-* #7112 Cleanup Appveyor build warnings
-* #7109 Sorting transaction by Date and other column which is NOT "ID"
-* #7059 Show transactions panel for an account group
-* #6966 Enabling INT64 and SUID for MMEX4Desktop
-* #6860 Add executions of scheduled transactions in transaction panels
-
-Bugfixes:
-* #7178 Account filter setting "View Transaction Report..." is not persistent
-* #7175 Adapt new dB version
-* #7157 Cash Flow Report for Specific Accounts treats transfers in reverse
-* #7142 All Transactions and Scheduled Transactions Menu Items Missing in latest Beta Version
-* #7130 Stock ticker ^RIYWCT not recognized
-* #7110 Sorting transactions by "Date" and "Id" is not working properly
-* #7102 Crash when blank checking panel area is right clicked in Linux
-* #7099 Column data incorrect when switching between databases
-* #7097 CSV Import - attempting to load a preset saved for an account with an int64 ID results in error
-* #7090 Import causes PAYEE_V1 Exception constraint failed[2067]
-* #7088 Unable to Edit Payees with larger values
-* #7082 Transaction Hyperlinks on HTML Reports not working with larger values
-* #7070 incorrect language display 1.9.0 Beta
-* #7033 Checking panel columns are duplicated when Settings dialog is closed
-* #7030 Import CSV with new lines
-* #7018 Transaction Report - Account handling broken
-* #7012 Unable to delete custom fields
-* #7009 MMEX crashes when creating a new database
-* #6998 MMEX crashes whenever the nav tree is reset
-* #6992 can not save PAYEE_V1
-* #6990 String missing from Crowdin
-* #6977 'Deleted Transactions' is crashing in v1.8.1
-* #6975 Account View: Columns showing incorrect data in v1.8.1
-* #6972 Error in "About panel" on 1.8.1
-* #6971 Impossible to open an encrypted database with version 1.8.1
-* #6956 Invalid Total Amount on split transaction
-* #6924 Fatal error occurs when entering date value exceeding the specified value
-* #6917 Translations broken
-* #6871 Database encryption change to AES256
-
-Version 1.8.1
-~~~~~~~~~~~~~~~~~~~~
-Released: 2024-11-29
-
-Features:
-* #6892 wxWidgets 3.2.6
-* #6847 about default column seq.
-* #6827 The model of scheduled transactions (billsdeposits) is confusing
-* #6799 Align with wxWidgets 3.2.5 release
-* #6743 Mohtly budget overview no longer availabe
-* #6737 Unable to edit Stock Transaction
-* #6733 Total Net worth line on Dashboard hide when scrolling down
-* #6703 Provide a calculator attached to Amount column
-* #6538 Upgrade database encryption to AES256
-* #5887 Account Reallocation - Remove Selected Account's Type
-* #4160 Order of columns in the transaction list is not saved
-
-Bugfixes:
-* #6957 subtract monthly budget from yearly budget in reporting - strange behaviour
-* #6954 Show notes of split category in transaction details page
-* #6945 Values containing "é" accents are not filterable on reports ANSI - UTF8
-* #6938 `User Interface Language` list incorrectly showing in English when System locale is selected (System locale = English, Australia)
-* #6935 "Find all transactions" not working from checking account panels
-* #6917 Translations broken
-* #6913 CI builds failing due to bad translation in po/zh_TW.po
-* #6897 Please allow `Cash Flow - Daily` to be translatable
-* #6863 Disallow blank payee name in edit dialog
-* #6781 Localized Pie-Charts are broken
-* #6763 Thousands separator is missing, again
-* #6752 Custom Field - Date Error
-* #6745 Cashflow transactions doubling income payments
-* #6736 Custom reports broke down after upgrading to 1.8.0
-* #6709 New release 1.8 - account line characters are no longer visible
-* #6393 Transaction Report - filter window has an overlapping between 'Specify' and 'Presentation Options' on MacOS
-* #6158 Entry Account Name Invalid When Correcting Title Case
-* #6056 database upgrade to version17 failed [ 1.6.4. ] Datebase upgraded?
-
-
-Version 1.8.0
-~~~~~~~~~~~~~~~~~~~~
-Released: 2024-04-29
-
-Features:
-* #5685 Transaction report charts
-* #3681 Provide 'view reset' option
-* #6633 [i18n] Update Help directory for English from en_GB to en_US
-* #6581 multi transaction Update: move Time Input to next line
-* #6481 MMB Files (*.mmb): 1. Add a space; and, 2. allow translation
-* #6457 Make Transaction column value copyable
-* #6566 Pie chart in Reports - Number format is inconsistent with decimal digits count & comma separation
-* #6431 open dialogue extension
-* #6408 Transaction Report - Rate column
-* #6386 Ensure that the generated file from NEWS.md can pass Flathub validation.
-* #5824 Transaction Filter / Nav Label Changes
-* #5512 Keep a history of past transaction report filters
-* #2729 Store the time of transaction
-
-Bugfixes:
-* #6672 Tag not entered when scheduled transaction is auto-registered
-* #6658 Transaction Filter dialog size is not stable
-* #6642 Incorrect balance being exported to CSV
-* #6640 Credit Limit progress bar shouldn't include future payment
-* #6639 Summary Report does not ignore deleted transactions
-* #6632 Design or bug - specifying ALL accounts on Transaction Filter
-* #6614 Translations are not shown for strings which include the char →
-* #6610 Asset "Initial Value" on dashboard does not display the initial value, VALUE field includes void transactions
-* #6608 `Current Value` of `Other Assets (124)` in `Assets` shown on `Dashboard` is **not** right justified
-* #6596 Translated Help (index) pages link to English sub-pages (grm, budget, stocks_and_shares) even when translations are available
-* #6595 When set the color, note is inserted
-* #6589 Transaction Report not filtering categories if period range specified
-* #6583 Remove shortcut hints shown in the "frequently used notes" menu on Linux
-* #6573 Dashboard - Accounts- context menu Y position
-* #6572 `Edit Account` dialog
-* #6570 Scheduled Transaction Dialog - Payments Left
-* #6561 Unchecked in custom field, date format
-* #6554 export as CSV file, wrong text in savefiledialog
-* #6548 can't resize split note dialog
-* #6524 CSV upload payee matching: option "Add Match Details to Notes" does not work
-* #6523 Transaction Report not showing all tagged transactions
-* #6503 Move transactions
-* #6497 Using the right-click menu option "Find all transations with..." in the 'All Transactions' panel does not apply the filter
-* #6493 Wrong exchange rate downloaded for BTC/CHF
-* #6489 Bad desktop file
-* #6480 Transaction Report Filter Saved Settings - Category is cleared on focus if it contains a regular expression or a Category not in the list
-* #6476 Crash when 'bad' filter identified
-* #6474 comma not always accepted with different settings
-* #6465 1.7.0 has compile error when compiling from source
-* #6424 Tags are not being copied during copy/paste transactions
-
-
-Version 1.7.0
-~~~~~~~~~~~~~~~~~~~~
-Released: 2023-12-26
-
-Features:
-* #6247 GA4 integration
-* #6246 Have Flathub as the sole distribution mechanism for MMEX on Linux
-* #5401 Import with custom columns
-* #4232 Option to easily view all transactions for a payee by selection
-* #6354 Update GRM submodule for 1.7.0
-* #6333 Recent Files list doesn't always show the full path to the recent MMX .mmb files
-* #6332 Copy text on About window
-* #6322 wxWidgets 3.2.4 released
-* #6311 [Feature Request] Use Credit Card credit limit to format Credit Limit field automatically
-* #6308 Sort share accounts in the nav panel by STOCKNAME instead of STOCKID
-* #6305 Remove wxDatePickerCtrl workaround for MacOS
-* #6200 New/Edit Scheduled Transaction: Set Focus on Amount should select its value
-* #6185 General Manager Reports
-* #6143 Rename Full Transactions Report to Account View: All Transactions
-* #6069 Please extend the `Search` field to the end of the window. Thank you
-* #6063 Strings ordering
-* #6062 Organize vs Organise
-* #5989 Build with wxWidgets 3.2.3
-* #5464 Improve budget perfomance report
-* #5439 Addition of "classes" or "tags"
-* #4899 Import dialog / Appearance of the list of templates
-* #4270 Import data into custom fields from CSV (& other file formats)
-* #1983 Change name of Recurring Transactions to Transaction Planner
-* #1349 Consolidate README.md and README.TXT
-
-Bugfixes:
-* #6346 Invalid Menu ID causing debug alert
-* #6338 No error message shown when unable to move transactions from one account to another with an invalid account creation data
-* #6323 Booking in foreign currency
-* #6296 MMEX Instance crashes when trying to create a new Asset
-* #6281 Plural when multiple transactions selected
-* #6280 `Tags` down-arrow too small
-* #6270 Transaction Report - Wrong Field(s) Become Hidden Due to Tags/Rate Column Indices
-* #6212 Transaction Report crashes if category starts with `+`
-* #6203 Refresh Stock Prices from Yahoo error "url using bad/illegal format or missing url" in version 1.7.0 beta.1
-* #6183 Tags Filtering
-* #6154 `Color` not showing in `Transaction Filter` as vertical scrollbar can not go any further down
-* #6141 MMEX 1.7 Beta 1 - High CPU & GPU usage when Edit Transaction and Transaction Filter dialogs are displayed
-* #6140 Dropdown menus issue (duplicated list)
-* #6102 Dashboard Transaction Statistics erroneously includes deleted transactions
-* #6098 View Since Statement Date does not work unless account statement is Locked
-* #6096 MMEX icon in ALT+TAB is blurry
-* #6089 Crash when adding a new asset
-* #6077 MMEX database Upgrade to version 18 Failed
-* #6074 Money format question
-* #6071 Saving account - deposit 0, saved as withdrawal
-* #6064 Memory leaks on CSV import
-* #6040 Refresh Stock Prices from Yahoo error "url using bad/illegal format or missing url"
-* #6036 Crash in theme manager
-* #5988 Homepage account balances wrong for some currencies
-* #5344 macOS menubar Window option position & localization
-* #5330 MacOS window refresh UI client area corruption
-* #5328 bad string (translations issue)
-* #5215 Transaction Filter dialog loses its saved display location on the screen
-* #1691 Stock errors                                               
-
-
-Version 1.6.4
-~~~~~~~~~~~~~
-Released: 2023-06-21
-
-Features:
-* #5945 DB password change dialog Cancel button
-* #5904 REPORTS - On all charts on V. 1.6.4
-* #5901 Currency Dialog Representation
-* #5892 1. Remove `Sub Category:` from budget entry dialog; 2. Show entire category path in `Category:`
-* #5861 1. Implement `Theme Mode` = `Auto` to select `Light`/`Dark` theme from operating system setting; 2. Rename `Auto` to `System`.
-* #5853 Transaction sound
-* #5812 Transaction report: option to group by ID
-* #5792 Extra date format required.
-* #5790 Associate an import/export Preset (template) name with an account
-* #5759 Automatically Download Stock Prices at Startup
-* #5709 Titlebar display order: 1. database filename; 2. localized program name. `Recent Files` menu: 3. Add database directory
-* #5706 Split Transaction Notes are not exported to QIF files
-* #5668 Make Dialogs resizable
-* #5659 Changes `Files` to `File` in `Import from`
-* #5658 Changes keyboard shortcuts in `Accounts` menu
-* #5655 Change `Url` to `URL`
-* #5650 Add ellipsis to "View with Transaction Filter" menu option
-* #5636 Change `system default` to `System default` and other minor improvements
-* #5571 Deleted Transaction Dialog Titlebar
-* #5465 Show only subtransactions that match the filter
-* #3684 Drag and Drop to import file in correct account
-* #3148 Payee matching
-* #2361 Conversion rate input for transfer type 'Transaction' Advanced (checked)
-* #1806 MMEX Flatpak listing on Flathub
-* #1254 Register filetypes for mmex at system level in Linux
-
-Bugfixes:
-* #6030 IUSE.L rate
-* #6013 Crash when closing QIF import dialog while reports are open
-* #5999 Custom decimal field validation bug
-* #5975 Transfer arrow points the wrong way on Share Withdrawal transactions
-* #5973 Share accounts displayed in Favorites even if "Display Share Accounts" is unchecked
-* #5969 Incorrect Total Gain/Loss within Stock widget on the Dashboard
-* #5966 Crash when deleting or restoring transactions using context menu
-* #5964 Constraint error on upgrade from DB 17 to DB 18 when another database is already open
-* #5949 bad locale name
-* #5948 Error opening encrypted DB
-* #5947 Error when try to import a .csv file with a subcategory missing
-* #5938 Button not visible in Relocation dialog.
-* #5926 Erroneous transaction (causes crash on click)
-* #5910 MMEX version 1.6.3 64-bits
-* #5894 Can not update stock prices. Get invalid cookie error.
-* #5890 share update error
-* #5885 `Transaction Filter` is bigger than the screen
-* #5875 Initialized when entering Unicode characters in the custom field Tooltip.
-* #5870 Check for updates
-* #5860 Category Report fails reporting 0 even if expenditures are present
-* #5857 Crash when using Organize Categories or Organize Payees if transaction report is open
-* #5855 Stock Portfolios: Click on update throwing Invalid Cookie error
-* #5852 Crash when creating new database & account
-* #5843 Stock Avg Share Price and Total Cost calculation error
-* #5835 Going over Account text field, using Tab, deletes selected account
-* #5834 Incorrect total net worth reported on Dashboard
-* #5833 Summary of stocks Gains/Loss currency exchange error
-* #5832 Transaction Details panel becomes unnecessarily wide when custom field contains data
-* #5830 Auto recurring transaction crash
-* #5828 Stock and Asset transactions can be copied/pasted using keyboard
-* #5823 View Trans window for Stock transaction - make it larger/resizable please.
-* #5817 Transaction Filter does not work correctly when changing an account
-* #5813 Range options in transaction filter have no effect
-* #5809 Account, Payee and Category dropdown lists are not active
-* #5808 New Tranaction widnow is growing after reopening and can't be shrinked down
-* #5791 Colour settings are not saved with the template on import dialogs
-* #5774 Locale is carried over between databases.
-* #5772 CSV Import - "Type" defined amount sign does not work
-* #5769 RESOCONTO OPERAZIONI - FILTRO NON VA QUANDO SALVATO
-* #5752 Transaction Report Filter does not work with Split Transaction Notes
-* #5683 Cancel add asset transaction when creating new asset crashes MMEX
-* #5670 MMEX crashes on asset transaction when "Last Used" is set for Default Payee, "Last used for payee" is set for Default Category, and the last transaction was a transfer
-* #5643 Can´t add Initial Balance on Polish Zloty (PLN) Currency
-* #5641 Imported transactions from webapp not working correctly
-* #5630 Transaction not deleted
-* #5629 1. Please expand `Search` field; 2./3. remove spaces ` ` before and after `/`; 4. `Show All` keyboard accelerator
-* #5628 Please allow title `Currency Manager` to be translatable
-* #5626 Please allow `locale::facet::_S_create_C_locale name not valid` to be translatable
-* #5625 Please allow `Normal`, `Enlarged`, `Large`, `Huge` to be translatable
-* #5618 Crash on selecting share price in investment window (see Image)
-* #5615 1.6.3 keyboard shortcuts do not work anymore
-* #5614 Recurring transactions.
-* #5606 Search Feature issue introduced 1 - 2 updates ago not resolved
-* #5602 QIF import date format
-* #5599 Transaction Report / Categorie
-* #5590 GRM text box context menu is not translated
-* #5576 Issue importing attachment to the desktop application
-* #5573 Budget Performance Report
-* #5568 MMEX database upgrade to version 17 failed
-* #5451 Missing currency ZMW Zambian Kwacha
-* #5394 for "all transactions" CRTL+c does not work
-
-Miscellaneous:
-* #6032 GUI - minor text improvement in Russian
-* #5997 MMEX flatpak is not listed on website
-* #5962 What does INFOID: 8 relate to please?
-* #5686 Budget view crash on double click category summary
-* #5656 Show count of selected/filtered/total records in the view
-
-
-Version 1.6.3
-~~~~~~~~~~~~~
-Released: 2023-02-01
-
-Features:
-* #5521 Last updated date time for transactions
-* #5530 Time Picker for GRM
-
-Bugfixes:
-* #3965 Transactions color change
-* #4698 Filters do not take into account transactions where the categories are split
-* #5437 Void Transaction are considered in cashflow report (both daily, montly, and transaction)
-* #5444 Hidden subcategory is shown at the drop-down window
-* #5457 Transaction report incl sub categories fails duplicate reports
-* #5466 Recurring transactions - attachments are disappear
-* #5467 Deleted transactions should be excluded from Last Used date query
-* #5474 QIF ability to import/export field "E" of split lines notes
-* #5489 Forecast Report due to multiple currencies
-* #5504 Export as / Import from ... account menu
-* #5541 Edit Account images
-* #5549 ALT+letter button and menu accelerators also activate the transaction status accelerator actions
-* #5569 Сrash when all historical stock prices deleted
-* #5583 Quicken QIF import issue in split transactions with balnk row
-
-Miscellaneous:
-* #4334 #5516 #5427 #5428 #5429 #5459 #5509 #5468 #5462 #5461
-
-
-Version 1.6.2
-~~~~~~~~~~~~~
-Released: 2022-12-18
-
-Notes:
-* Your database will be updated once you run this version. You will then not be able to open your database with earlier versions of the software or run Android versions with the same database. As ever, it is recommended to take a copy of your database prior to installing any new software version.
-* #1477 changes the DB schema for the storage of categories. Whilst this will not affected basic usage of MMEX if you have created GRM reports that use categories then you may need to update them. The standard GRM templates have been updated to accommodate the new schema and can be used as examples. 
-
-Features:
-* #1477 Nested Categories
-* #5302 Upgrade SQLite
-
-Bugfixes:
-* #5334 QIF Import does not import transactions with date < today if the account doesn't already exist
-* #5346 Account summary not showing assets or shares
-* #5352 Crash on selecting Monthly or Yearly - Reports: Summary of Accounts
-* #5356 README links to Travis CI for linux/mac build status
-* #5359 Order by 'status icon' column in transaction lists
-* #5360 Hovering mouse pointer over an asset icon displays unwanted tooltip outline
-* #5364 Multi-transaction edit not allowing change to Amount, Payee, or Category
-* #5370 Reconciled amount incorrect if deleted transactions exist
-* #5372 Resolve MSVC compiler warnings
-* #5377 Modifications of split values are lost when row is added
-* #5381 Asset - Initial Value and Current Value
-* #5382 Mouse wheel scrolling rate is very slow in Split Transactions dialog
-* #5391 Use of | (pipe) in category name causes issues with transaction report
-* #5392 Unexpected space added to Category filter when Regex is used to include multiple sub categories
-* #5415 MMEX Options: center labels under icons
-* #5416 Currency Dialog - Incorrect Column Header ("Symbol" should be "Code")
-* #5433 Failure to upgrade database to DB v17 for MMEX 1.6.2
-
-
-Version 1.6.1
-~~~~~~~~~~~~~
-Released: 2022-11-18
-
-Notes:
-* Your database will be updated once you run this version. You will then not be able to open your database with earlier versions of the software or run Android versions with the same database. As ever, it is recommended to take a copy of your database prior to installing any new software version.
-
-Bugfixes:
-* #5197 Account Summary reports do not include asset values
-* #5211 Toolbar buttons are erroneously greyed out when opening an existing database via App Start dialog
-* #5244 Recurring Transaction Check Fix
-* #5250 Add split button deletes the previous values
-* #5254 The text for translation is fragmented
-* #5273 Total not updating correctly on split transactions view
-* #5281 Recurring Transactions - Remove filtering
-* #5290 New transaction - Incorrect minimum balance check
-* #5292 Transaction Report does not show split transaction notes
-* #5298 User confusion regarding Deleted Transactions node in Navigation tree
-* #5299 Transaction Report node in Navigation tree is not highlighted when corresponding report is displayed
-* #5310 Home Page Assets Widget collapse state not saved
-* #5320 Notes disappear when clicking "Cancel" in Split Transactions window
-* #5324 Crash when creating a share transaction with a date older than opening date of the account
-* #5331 Slow refresh when add split rows
-* #5339 Beta build crashes on asset deletion
-
-Features:
-* #2963 Added a Deleted/Trash transaction feature
-* #5234 Quick category entry using ":" to autocomplete (Windows only)
-* #5251 Now shows notes of split transactions in account view
-* #5259 Hide/Unhide of Custom Reports
-* #5276 Split transaction notes now displayed in the information panel
-* #5292 Transaction Report now shows split transaction notes
-
-
-Version 1.6.0
-~~~~~~~~~~~~~
-Released: 2022-10-27
-
-Notes:
-* Your database will be updated once you run this version. You will then not be able to open your database with earlier versions of the software or run Android versions with the same database. As ever, it is recommended to take a copy of your database prior to installing any new software version.
-
-Features:
-* #3779 Adoption of wxBitmapBundle to support HighDPI display
-* #4122 Invalid calculation Stocks Gain/Loss
-* #4362 Online help pages
-* #4412 Management of assets
-* #4791 Odd Window positioning behaviour (MacOS)
-* #5091 Include Grand Total for Reconciled Column
-* #5106 Organize Budget actuals always reflect current year
-* #5108 Secondary 'Sort By' Column
-* #5109 Add ability to use RETURN key to bring up category selection on organize categories
-* #5122 v1.5.21 has calculation error in account view
-* #5137 Monthly Budget showing wrong "Actual" totals
-* #5145 Transaction Report - Custom field settings not recovered
-* #5147 Transaction Report - Saved custom field settings not used when run from navigation tree
-* #5158 New Category creation whilst in Split Transaction issue
-* #5170 Can not save Category_V1 / Subcategory_1
-* #5191 Crash on account creation due to blank image list
-* #5193 Transaction Report Date Range not saved
-* #5198 Asset transactions marked as transfer are not counted in asset value
-* #5205 Crash when cancelling the creation of a new database if App Start Dialog has been used
-* #5210 Transaction Filter Date Range is not updated to reflect the current setting of Period Range
-* #5218 New database wizard is too wide when application language is French
-
-Bugfixes:
-* #910 Notes in split categories
-* #1158 Currency Manager window should be more ergonomic
-* #1390 Enable/disable payees
-* #2307 Notes on Budget lines
-* #3554 Account initial balance is not dated
-* #4099 Notes field for budget page
-* #4216 DB ver. 15
-* #4280 Add Payee Information Fields
-* #4545 Dark mode for help pages (MacOS/Linux only at present)
-* #4631 Regular Expressions in transaction filter notes
-* #4730 Block/Hide Categories
-* #4880 Use CircleCI for pipeline builds
-* #5100 Upgrade to wxWidgets 3.2.1
-* #5111 Asset widget on homepage should show list of assets
-
-
-Version 1.5.21
-~~~~~~~~~~~~~~
-Released: 2022-09-21
-
-Bugfixes:
-* #3892 Manual share price is not saved
-* #4087 Summary of shares report not displaying fractional shares if total is greater than 1
-* #4807 Stocks/Shares - Application Crashes on Trying to Enter a Stock Transaction
-* #4954 mmex 1.5.19 : wrong behaviour of autoselection of category
-* #4969 Stock Portfolio Gain/Loss
-* #5033 Split Category Transactions Do Not Appear on Transaction Report
-* #5035 Filter on Date / Period - Will not pick up current date and date range including current date
-* #5042 Crash Report - Upgraded from v1.5.18 to v1.5.20
-* #5049 Calculation and display errors in the securities portfolio
-* #5054 Incorrect ascending/descending sort order indicator for Assets/Recurring Transactions columns
-* #5056 Organize Category dialog does not scroll newly added items into view
-* #5057 In-place editing of asset name allows asset with blank name to be created
-* #5058 Stock balance calculation in ModelStock and summary report always uses current number of shares
-* #5059 Minimum width of Organize Categories dialog allows buttons to become clipped
-* #5077 Budget reporting when offset is non-zero
-* #5101 Debug error when right clicking on column header in "All Transactions" -- extra blank lines in "Hide/Show Columns"
-
-Features:
-* #2200 Add a sponsor button in MMEX GitHub repository
-* #4214 Option to link a monthly budget to an annual budget
-* #4549 Improving** the UX of the "Organize Categories" window — drag'n'drop
-* #4690 Secondary 'Sort By' Column
-* #4741 Add profits to budget
-* #4844 "Empty" Transaction Report
-* #4989 Category collapsed state
-* #5051 Date Control Tooltip Suggestion
-
-
-Version 1.5.20
-~~~~~~~~~~~~~~
-Released: 2022-09-02
-
-Bugfixes:
-* #4868 Integer and Decimal custom fields are treated like Strings in the Account view
-* #4946 Optimize/Fix use of mmTextCtrl in dialogs using this control for numbers
-* #4950 Problem entering decimal numbers
-* #4951 Reference number format
-* #4955 Integer Custom Field - erroneous behaviour
-* #4978 Spurious column sort-order indicator shown when double clicking on Stock Portfolio
-* #4982 Advanced Filter not saving new 'Date Range' value
-* #4999 Boolean custom field misalignment
-* #5000 Saved Transaction Reports don't work in Linux
-* #5003 Date custom field focus and update issues
-* #5005 Split Transaction Dialog grows too big
-* #5012 "Split Transaction" not displayed in category field on Linux
-* #5019 Display 'Split Summary' infotip sometimes not displayed
-
-Features:
-* #4971 Transaction report - add feature to group by "type"
-* #4987 Boolean and Date custom field improvements
-* #5016 Place focus in the Search field when Organize Categories dialog is opened
-
-
-Version 1.5.19
-~~~~~~~~~~~~~~
-Released: 2022-08-19
-
-Bugfixes:
-* #4698 Filters do not take into account transactions where the categories are split
-* #4881 "Manage Categories" window in a split transaction only opens for the first 2 split rows
-* #4886 After upgrading to 1.5.17 and 1.5.18 it does not keep the last category for a given payee.
-* #4887 After you have relocated a Payee successfully (confirmed) the dialogue box should clear from screen.
-* #4897 Account website URL validation failure
-* #4907 Display Share Accounts - the setting is not saved
-* #4911 Buttons become hidden on Split Transaction dialog
-* #4918 Change the term 'Scale' to 'Decimal Places' for the English translation of MMEX
-* #4919 Edit existing category name and entering a colon
-* #4921 Decimal custom fields do not retain values greater than 999.99 when editing a saved transaction
-* #4922 Crash when Transaction Filter includes a custom field
-
-Features:
-* #4885 Search consistency for Payee and Category dialog
-* #4907 Display Share Accounts - the setting is now saved
-* #4934 Summary of Accounts - charts change (stacked Bar + Line)
-
-
-Version 1.5.18
-~~~~~~~~~~~~~~
-Released: 2022-07-28
-
-Bugfixes:
-* #3226 Organize Attachments dialog refers to internal account number instead of the actual account name
-* #4827 Options fields fit if resized
-* #4828 Renaming Category - Unfriendly error message and incorrectly display of category name
-* #4843 Transaction Report - no data
-* #4838 Last Used Category is not filled in when selecting Payee from Organize Payees Dialog
-* #4852 MMEX will not run on MacOS < 10.14
-* #4867 Custom decimal field precision incorrect on transaction edit
-
-Features:
-* #4830 Cashflow report showing transactions
-* #4840 Cash Flow reports settings
-* #4863 Improve usability of pop-up calendar on MacOS
-
-
-Version 1.5.17
-~~~~~~~~~~~~~~
-Released: 2022-07-17
-
-Bugfixes:
-* #2704 Add Account Wizard mentions Savings in the text, but it it not one of the Type choices
-* #3960 Windows version is not displayed correctly
-* #4371 Category sort is incorrect with French characters
-* #4710 Transferring between two accounts with same currency get converted into base currency using reverse forex
-* #4711 Font now too large  
-* #4712 Streamlining the Split Transaction dialog enhancement 
-* #4714 Add new subcategory
-* #4716 Sum operation in the Amount field is not performed with new 1.5.16
-* #4736 Filter is broken after account switching
-* #4745 Export & Import CSV File Invalid Date Error
-* #4749 Relocate Dialogs find entries when nothing specified
-* #4757 Unable to edit category for transaction in closed account
-* #4763 Budget Setup - Text field too small
-* #4772 Layout and behaviour of Recurring Transaction dialog is not consistent with Single Transaction dialog
-* #4778 App crashes when adding new share transaction
-* #4785 Crash when switching transaction type
-* #4786 macOS: Crash When Changing HTML Scale Factor
-* #4787 Behaviour of Recurring Transaction dialog not consistent with Single Transaction dialog - Amount Field Clearing
-* #4796 Saved presets in Transaction Filter and saved column formats duplicate
-* #4804 Colour is displayed as Color on field labels when language is set to English (United Kingdom)
-* #4813 Multi-transaction update of Payee Name causes "Payee Error"
-
-Features:
-* #3139 macOS - No Drop Down Calendar When Entering Transactions Dates
-* #4708 Create mmDatePickerCtrl
-* #4717 Inconsistent behaviour when pressing Enter in transaction category field enhancement 
-* #4748 Delete source category after relocation
-* #4754 wxScrolledWindow for options dialog enhancement 
-* #4759 wxWidgets 3.2.0
-* #4768 Transaction Report: void status amount
-* #4779 Default category for transfers
-* #4789 Report Category including all sub-categories
-
-
-Version 1.5.16
-~~~~~~~~~~~~~~
-Released: 2022-06-23
-
-Bugfixes:
-* #4593 Transaction report error
-* #4621 Budget Reports - default value is not saved
-* #4625 Version: 1.5.15 64-bit freezing
-* #4633 Transfer in Recurring Transactions panel
-* #4643 Transactions Filter with split transactions working incorrect
-* #4648 Xchange rate (advanced box) not picking up rate after currency update
-* #4651 Input not allowed for custom decimal fields when precision set >0
-* #4652 No summary data after Shift-Click selection of multiple transactions
-* #4659 Split Transaction Dialog amount window not visible
-* #4660 Reports: specific accounts checkbox is not saved
-* #4662 Transaction Report - group by category
-* #4663 Transaction display after category selection
-* #4664 Split Transaction Dialog enhancement
-* #4692 Closing application from Dock icon on MacOS is not done gracefully when dialog open
-
-Features:
-* #3634 Font size
-* #4237 Dialogs size storing
-* #4439 Dialogs with categories, payees, accounts etc refactoring
-* #4591 Split Transaction Dialog refactoring
-* #4680 Transaction report name/title
-
-
-Version 1.5.15
-~~~~~~~~~~~~~~
-Released: 2022-06-16
-
-Bugfixes:
-* #2681 curl upgrade to 7_82_0
-* #2714 Libcurl missing
-* #2590 Portable mode ini file missing
-* #3241 MMEX shows using libcurl v7.61 which currently has 17 vulnerabilities
-* #4159 Add Custom Fields to Recurring Transactions
-* #4286 Back link no longer works for "Where the Money Goes" and "Where the Money Comes From"
-* #4296 Empty message language changed
-* #4302 lunasvg upgrade to v2.3.1
-* #4307 Categories export (JSON)
-* #4314 Not all custom fields are visible in the transaction dialog
-* #4319 Add Custom Fields to Transaction Report
-* #4321 JSON export ignore account for Custom fields
-* #4334 Ellipsis ... actualization in the main menu
-* #4335 Storing the language code
-* #4341 QIF file import improvements
-* #4346 Bad array new length message
-* #4352 Frequently used notes does not display latest notes
-* #4357 Splash screen link no longer works
-* #4377 Viewing closed account
-* #4401 Transaction report Filtering details
-* #4407 Notes are not erased when changing accounts
-* #4418 Categories translation
-* #4419 Transaction Filter settings
-* #4436 Update Python scripts the make them Python 3 compatible
-* #4472 Default custom field value
-* #4483 Expanding a collapsed Navigation tree not intuitive for new users
-* #4516 Report Manager Navigation tree size
-* #4519 Use macOS 11 app icon style
-* #4532 Minus amount display on Income vs Expenses Monthly
-* #4550 Improving the UX of the Organize Categories
-* #4602 Voided transactions in a filtered view are being included in the calculation
-
-Features:
-* #2232 Filter by multiple categories and payees
-* #3430 Hide unused Reports
-* #3750 Transaction Report Filter settings items in Navigation tree
-* #4420 Assign color to imported transactions
-* #4250 Allow more than 10 saved transaction filters
-* #4453 Color selection for Multi Transaction Update
-* #4542 Allow column sorting on Summary of Accounts & Income vs Expenses reports
-
-
-Version 1.5.14
-~~~~~~~~~~~~~~
-Released: 2022-04-14
-
-Bugfixes:
-* #4183 Attachments are not cloned when a transaction is duplicated (or copy/pasted)
-* #4187 Filter out obsolete currencies in Currency Dialog and Currency Exchange Rates
-* #4189 Categories Monthly Report end date wrong
-* #4191 Invalid group separator issue
-* #4195 Zero Share price summary issue
-* #4200 Summary of Accounts - Yearly - Miscalculations
-* #4207 Set custom fields when editing multiple transactions
-* #4223 Closed account - icon color
-* #4227 Cannot edit or add payees in "Edit Recurring Transaction" window
-* #4233 HTMLEncode not handling non-ASCII
-* #4235 Sort issue? - Capital vs lowercase
-* #4239 Transaction Report -> Transaction Filter: Can't change 'Transfer To' from here
-* #4240 Transaction Report Footers Take Up Too Much Space
-* #4241 'Others Icons size' sometimes get changed unexpectedly...
-* #4242 RSS feed on new site is at a different URL
-* #4258 1.5.14-Beta.1 does not compile on Ubuntu 18.04 'bionic'
-* #4260 Recurring Transaction Dialog should show day of week
-
-Features:
-* #3998 Reports summarized to main category
-
-
-Version 1.5.13
-~~~~~~~~~~~~~~
-Released: 2022-02-06
-
-Bugfixes:
-* #2685 Build issue with LuaGlue - Not declared name luaL_checkint
-* #4139 UI enhancement - Position of Frequently Used Notes button on Transaction dialog
-* #4150 Summary Report - mismatch between Chart pop-up and raw data
-* #4155 Incorrect last day for "show last month" menu item
-* #4168 New transaction isn't populated with the Custom Field value
-* #4171 Date format mask does not saved in CSV files import
-
-Features:
-* #4031 Fast payer search
-
-
-Version 1.5.12
-~~~~~~~~~~~~~~
-Released: 2022-01-30
-
-Bugfixes:
-* #2014 Canonical names for doc folders
-* #3980 1.5.10-Beta.1 crashes with warnings about missing themes
-* #4032 Program Crashes on Organize Payees or Organize Categories
-* #4065 Hotkey for setting Status to "None" differs depending on context
-* #4070 ORGANIZE PAYEES Error
-* #4085 Categories Summary report sub-category total does not match Transaction report sub-category for same period.
-* #4092 Future bookings are displayed incorrectly on homepage
-* #4116 Incorrect "Summary of Accounts" balance
-* #4120 Stocks Report corrupted in v1.5.11
-* #4127 Downloading Currency and Stock rates opens User Manual
-
-
-Features:
-* #3669 Summary line of the Account Display is "odd"
-* #3897 Using transfer in editing multi-transactions
-* #4009 Transaction report ->Presentations options
-* #4098 Select all the visible transactions using `Cmd + A`
-* #4110 Jump between accounts along the "Transfer" transaction
-* #4124 Duplicate Recurring Transaction
-
-Notes:
-* New help pages added: Chinese Simplified, Dutch, Croatian
-
-
-Version 1.5.11
-~~~~~~~~~~~~~~
-Released: 2021-12-07
-
-Bugfixes:
-* #4041 Price for Gold Feb 22 (GC=F)
-* #4036 Current year range has wrong periods in December
-* #4055 Current Year not correct
-* #4038 Trouble downloading new versions
-* #3223 The scroll bar flickers
-* #4025 Report graph causes app to freeze when window not 'Maximised'
-
-Features:
-* #4023 Budget categories research
-* #4048 Update to ApexCharts 3.28.2
-
-
-Version 1.5.10
-~~~~~~~~~~~~~~
-Released: 2021-11-23
-
-Bugfixes:
-* #3967 Warning sound
-* #3926 Stock report crashes
-* #3988 Autocomplete of "Account" not working on MacOS
-* #3995 Creating Recurring Transactions with all data from existing entry (include notes field)
-* #3996 When Re-allocating an Existing Payee the search bar is stuck on one character
-* #4002 No Automatic Scroll to Bottom After Creating Duplicate Transaction
-* #3598 Custom fields
-* #2334 Yahoo exchange rates issue
-* #4020 Currency exchange rates - currency values history
-* #4019 Currency exchange rates saving
-
-Features:
-* #3283 Display of the bookings
-* #3829 Where the Money Goes > view Details of Transactions
-* #3945 Transaction Report to include specification of "Period" in addition to date range
-
-Version 1.5.9
-~~~~~~~~~~~~~
-Released: 2021-10-31
-
-Bugfixes:
-* #3899 Advanced filter saved by ok
-* #3914 Recurring Transaction - color of transaction
-* #3933 Currency exchange rates info
-
-Features:
-* #2080 Income vs Expenses on Home Page
-* #3745 Current year income / expenses
-* #3935 Ability to add subtotal to transaction report
-* #3948 Recurring Transactions Entry
-
-
-Version 1.5.8
-~~~~~~~~~~~~~
-Released: 2021-10-02
-
-Bugfixes:
-* #3870 The selection "last month" is wrong
-* #3763 macOS: New Transaction Hot Key should be CMD+N
-
-Features:
-* #3863 Ability to specify which columns are include in transaction report
-* #3875 Display growth/performance/cumulative difference on Income vs Expenses
-* #3877 Leave import view open after import
-* #3890 Stacked Area chart for Summary of Accounts
-
-
-Version 1.5.7
-~~~~~~~~~~~~~
-Released: 2021-09-18
-
-Bugfixes:
-* #3783 Transaction Type on CSV import is ignored?
-* #3800 Error in high figures when entering transaction amounts, or in balances / reports.
-* #3797 #3808 #3809 #3828 Translation fixes
-* #3820 Date Range menu disapears
-* #3830 Date spinner on Enter Recurring Transaction not working
-* #3846 Can't type in HTML Scale Factor (MacOS)
-* #3815 New Recurring Transaction switching Type of Transaction works partly but not as expected
-
-Features:
-* #3784 Duplicate transaction date
-* #3781 Budget and Reporting period - User selectable start of month
-* #3818 A single theme cannot support both light and dark modes
-* #3768 Belarisian translation finalized
-
-
-Version 1.5.6
-~~~~~~~~~~~~~
-Released: 2021-08-20
-
-Bugfixes:
-* #3648 Backup files has the same extension as main file
-* #3738 Help/About display geometry
-* #3740 warning C4706: assignment within conditional expression
-* #3748 Transaction report not classifying transfers correctly
-* #3756 Accounts selection in Advanced filter for single account list view is confusing
-* #3763 macOS: New Transaction Hot Key should be CMD+N
-* #3780 Duplicate transaction: amount resets if focus is moved out with mouse, not keyboard
-* #3785 Newly assigned Account is reset if transaction type changed on Edit/Duplicate
-* #3786 Summary of Stocks Display - alignment
-
-Features:
-* #1964 Transaction List Exchange rates
-* #3743 coincap.io API for crypto currencies
-* #3678 Show remaining credit limit on Credit Cards
-* #3768 Belarisian translation
-* #3787 Stocks Performance Charts - title text
-
-
-Version 1.5.5
-~~~~~~~~~~~~~
-Released: 2021-07-31
-
-Bugfixes:
-* #3643 Webapp - UTF-8 issue
-* #3696 'Confirm to add new payee' ignored
-* #3711 Payee default category enhancements
-* #3714 Payee changes when editing existing transaction (to change account)
-* #3724 Automobile Category not in Organize Categories but shows in report
-* #3733 Months not reported correctly for budget reports when using Financial Years
-* #3188 wxBitmapButton icon sizes should be consistent with other Buttons and widgets
-
-Features:
-* #3686 Allow filter by transaction highlight color
-
-
-Version 1.5.4
-~~~~~~~~~~~~~
-Released: 2021-07-18
-
-Bugfixes:
-* #1832 Financial year settings ignored in budget reports
-* #3626 #3645 Undefined Locale prevents saving transaction amounts greater than 999
-* #3625 'Summary of accounts' reports missing closed Accounts
-* #3627 Minor formatting issue with Monthly Summary of Accounts report
-* #3606 Multiple Transaction Edit and Transfers bug
-* #3620 wxHtmlWindow's do not support theme customisation
-* #3636 Wrong date format of an additional field
-* #3639 Custom fields save settings exception
-* #3640 Custom Fields sort order in Transaction Dialog
-* #3651 Bulk Transaction not saved
-* #3667 Crash on database creation
-* #3673 Upcoming Transactions widget will not close
-* #3666 Dark Mode theme lacks contrast in wcTreeCtrl's on MacOS
-
-Features:
-* #3180 Option to suppress tips
-* #3653 Search for Attachments
-* #3653 Search for Attachments description and UD Fields
-
-
-Version 1.5.3
-~~~~~~~~~~~~~
-Released: 2021-06-13
-
-Bugfixes:
-* #3536 Recurring Transaction Date Paid and Date Due Mix-up
-* #3557 Group separator using locale
-* #3558 Only open account currency
-* #3559 Currency format locale based options redesign
-* #3587 Cannot start: "bad locale name"
-* #3604 Autocomplete of target account for transfers on MacOS
-* #3585 Crash in Model_Currency::toString
-* #3325 Transaction Report settings name utf8 support
-* #3396 Account list loses focus when using keyboard navigation
-* #3474 Accounts Visible menu missing check mark to indicate which option is selected
-* #1295 Hot key for 'enter' & 'tools' is the same
-
-Features:
-* #3435 Transaction Report - multi-select for accounts
-* #3559 Currency format locale based options redesign
-* #3323 Date format display with Day name
-
-
-Version 1.5.2
-~~~~~~~~~~~~~
-Released: 2021-06-04
-
-Bugfixes:
-* #3222 Screen geometry
-* #3273 Update to wxWidgets 3.1.5
-* #3321 Theme manager window size
-* #3325 Transaction Report settings name utf8 support
-* #3326 UDFC01, 02... are not displayed in "All Transactions"
-* #3315 Browse button tooltip on Import/Export XML dialog refers to importing/exporting a CSV file instead of an XML file
-* #3337 Missing translation of categories in budget
-* #3340 Currency dialog: Width / Selected base currency icon / Search field label
-* #3348 Search by numbers on All Transactions view
-* #3355 Upcoming transactions applet
-* #3273 Update to wxWidgets 3.1.5
-* #3401 Category Icome/Expenses report not display date range correctly
-* #3414 Crypto currencies exchange rate
-* #3517 [Att.] is added in notes
-* #3532 lunasvg library upgrade
-
-Features:
-* #2473 Grouping character in amount
-* #3166 Theme background color
-* #3323 Date format display with Day name
-* #3347 Simple csv export
-* #3362 Enter next booking
-* #3375 Move multiple transactions at once
-* #3460 dd Mon yyyy date format
-* #3515 Display the difference value as a line on Income vs Expenses report
-
-
-Version 1.5.1
-~~~~~~~~~~~~~
-Released: 2021-04-24
-
-Bugfixes:
-* #1292 Add financial year start date option for budget
-* #3166 Theme background color
-* #3209 All Transactions panel currencies
-* #3240 Cashflow report error for negative total
-* #3238 Reallocate Payees performance issue
-* #3237 Update wizard info improvements
-* #3265 Custom Fields fixes
-* #3298 Change "saved filters" from check points to Listbox
-* #3299 Customfielddata will not be delete.
-* #3237 Update wizard info
-* #3261 Transaction Balance and sort order
-* #3239 Transaction not displayed from Account Link within Transaction Report
-* #3240 Cashflow report error for negative total
-* #3244 Update wizard window not expanded correctly
-* #3252 Import info panel not expanded correctly
-* #3242 Yahoo tickers
-
-Features:
-* #3267 User color to recurring transactions added
-* #3286 Hebrew help pages added
-
-
-Version 1.5.0
-~~~~~~~~~~~~~
-Released: 2021-04-11
-
-Features:
-* #3019 Load icons from zip and generate images from SVG
-* #2923 Update the application icons
-* #1961 The ChartNew.js was replaced by the ApexCharts
-* #2918 All Transactions Panel
-
-Bugfixes:
-* #1549 Budget Estimate with Bi-Monthly Category is Wrong
-* #2028 Tooltips on the pie chart in the Payee report present always a positive value
-* #2217 Multi-select for checking panel is broken
-* #2405 Crash if app killed in tray
-* #2418 Payee wrong autofill
-* #2442 menu icon sizing on MacOS
-* #2447 wxFileDialog always returns an empty string
-* #2626 Category - subcategory delimiter
-* #2662 Export to CSV amount fields format
-* #2705 MMEX always tries to connect to vps.moneymanagerex.org on startup
-* #2765 Advanced Filter in Accounts doesn't work
-* #2795 Split Deposit amount
-* #2817 Analytics collected on first run without user consent
-* #2825 WebView support for wkWebView with latest wxWidgets
-* #2826 Always Opens on Wrong Monitor
-* #2829 Add account choice to "budget performance"
-* #2830 Budget year name
-* #2833 Currency history only for existing transactions
-* #2844 Copy transactions with multi line notes
-* #2881 Build date/time updated on every build
-* #2893 Transaction report style
-* #2929 Menu items hot buttons
-* #2987 Display Share Accounts
-* #3151 Cash flow report exception
-* #3184 Organize Payees dialog editing issues
-* #3189 Position of New Transaction icon in the toolbar
-* #3227 Incorrect icon on Assets filter button
-* #3228 Color/Colour spelling inconsistency for English (UK) and English (US) application language
-
-
-Version 1.3.6
-~~~~~~~~~~~~~
-Released: 2020-12-24
-
-Bugfixes:
-* #1718 QIF import fails for single-digit dates
-* #2620 Crash when selecting "Relocate Payee"
-* #2621 graphs text encoding
-* #2730 Currencies manager contains too many currencies
-* #2631 advanced filter on bank/cash accounts
-* #2632 Unable to Change Date Format
-* #2647 Recurring Transaction: Due & Paid dates got swapped around
-* #2657 Invalid menu item name
-* #2661 why I can't change the language to Chinese (Traditional)?
-* #2662 CSV export for "balance" field causes TYPE CONV error when imported in ACCESS
-* #2671 Account Advanced filter Un-Reconciled does not working
-* #2673 Period: Over time has incorrect start date
-* #2674 Gain/Loss sort order is invalid
-* #2683 Transaction Filter, Notes search now only returns exact results
-* #2684 Application crash when selecting 'Relocate Payee' when in the "Organize Payees' dialog
-* #2688 Regression in Transaction report
-* #2691 Incorrect currency translation
-* #2694 MMEX Window is "off screen"
-* #2709 Export report to Excel
-* #2726 Missing translation of categories
-* #2732 QIF import and payee case sensitive issue bug import
-* #2733 json data for Google statistics
-* #2735 Bug in the Bug Report
-* #2738 mmex architecture info
-* #2746 Links handler in custom reports
-* #2761 Enable more then 3 characters as currency symbol
-
-Notes:
-* With virus-free greetings -- mmex development team
-
-
-Version 1.3.5
-~~~~~~~~~~~~~
-Released: 2020-06-15
-
-Bugfixes:
-* #2608 MMEX does not show graphics anymore (Thank you, Renato)
-* #2601 Top Withdrawals in Home Page
-* #2579 Added years for Cash Flow report labels
-* #2571 Navigation tree settings ignore some collapsed items
-* #2561 Saving of report settings
-* #2557 Detected memory leaks on Custom dates
-* #2556 #2549 #2554 Stocks Performance report
-* #2554 Stock name
-* #2520 Fuzzy translations
-* #2509 0,00 marked as negative
-* #2501 Reports panel
-* #2500 Report a bug does not run in an external browser
-* #2499 Attachments folder exception
-* #2497 Edit Share transaction
-* #2496 Unused category
-* #2494 Future transactions
-* #2492 Account naming issue
-* #2488 Attachments folder fix
-* #2487 Datepicker appearance
-* #2485 Crash on create account for shares
-* #2484 Crash or assert on transaction link
-* #2480 Display the Budget Setup without category summaries
-* #2478 Categories selection
-* #2477 wxBitmap labels and sizing issue
-* #2470 Crash on every reports Ubuntu 20.04
-* #2456 Currency rates fixes
-* #2449 Categories do not import when importing QIF files
-* #2443 Web app lost category and sub-category
-* #2440 #2449 #2443 Web app
-* #2433 Expenses report issue
-* #2432 Category Income/Expenses - Last 12 Months
-* #2427 Ignore future
-* #2426 Default Payee in Options/Others
-* #2417 Transaction Filter does not open
-* #2416 Crash when entering next occurrence of a recurring transaction
-* #2413 Webapp autostart memory leaks
-* #2410 Notes fiels in CSV import
-* #2403 Account in Transaction report selected
-
-Features:
-* #2518 Swedish translation (Thank you, Tomas Marklund)
-* #2512 Use currency history
-* #2506 Account webpage
-* #2506 Account webpage
-* #2425 Icon sizes
-* #2425 Icon sizes (Win)
-* #2392 Transaction colour
-
-Notes:
-* Currency Exchange Rates
-* Virtual File System
-* Foreign language versions updated on Crowdin
-
-Version 1.3.4
-~~~~~~~~~~~~~
-Released: 2020-04-26
-
-Bugfixes:
-* #2395 Graph scaling
-* #2387 Storage mmexini.db3
-* #2229 Account attachments fail to open
-* #2382 Bug - select category in recurring transaction
-* #2379 Transaction auto number
-* #2036 Categories:Monthly report - add date ranges
-* #2375 Custom Field String issue
-* #2369 Transaction dialog outlook (MAC)
-* #2031 Default category is not assigned automatically for known payee during .qif import
-* #1146 Possibility to run several mmex apps
-
-Features:
-* #2391 Grouping on Budget Setup
-* #2231 Export to JSON
-
-
-Version 1.3.3
-~~~~~~~~~~~~~
-Released: 2017-03-04
-
-Bugfixes:
-* assets #1074 #1070
-
-Features:
-Search box not working #1060
-
-Notes:
-* Mac build updated on Oct 7, 2017 to use wxWidgets 3.0.2 instead of 3.1. This fixes the issues with right click menus being greyed out.
-
-Version 1.3.2
-~~~~~~~~~~~~~
-Released: 2017-02-25
-
-Bugfixes:
-* Programs and Features icon in Windows. SF Issue #972
-* Albanian lang file
-* Prevent Crash on Home page Issue #1019
-* Hebrew, Hungarian Translations
-* Displayed Latin Currency symbols Issue #739
-* Crash on startup when files not found Issue #1033
-* Transaction Filter Crash, Account checked, none supplied. Issue #1043
-* Check for null pointer. Issue #979
-* Move Transaction. Issue #1063
-* HTML report export. Issue #1064
-
-
-Version 1.2.7
-~~~~~~~~~~~~~
-Released: 2016-04-14
-
-Bugfixes:
-* Italian translation updated
-* Russian translation updated
-* Help files updated
-* Validate math expressions (Issue #659)
-* Items in Navigation keep disappearing in Ubuntu and MacOS (Issue #658)
-* Transactions color tag is lost in some specific case (Issue #788)
-* Minor fixes
-
-
-Version 1.2.6
-~~~~~~~~~~~~~
-Released: 2016-03-05
-
-Bugfixes:
-* OK the default when entering a transaction (Issue #676)
-* most recent notes (Issue #677)
-* Fraction part may get lost after opening transaction for edit (Issue #690)
-* Grand Total missing stocks
-* Hebrew translation updated
-* Transaction Report formatting (Issue #717)
-* Monthly Summary of Accounts Report (Issue #610)
-* Minor fixes
-
-
-Version 1.2.5
-~~~~~~~~~~~~~
-Released: 2016-01-26
-
-Bugfixes:
-* Portuguese_br translation updated
-* Split transaction not allowed ENTER Key or ARITMETIC EXPRESSIONS (Issue #648)
-* Monthly Summary of Accounts Report deleted (Issue #610)
-* QIF import fixes (Issue #617)
-* Cash account type added for android synchronisation (Issue #455)
-* Minor fixes
-
-
-Version 1.2.4
-~~~~~~~~~~~~~
-Released: 2015-12-20
-
-Bugfixes:
-* Italiano translation updated
-* Home Page folder path fix
-* Speedup
-* QIF import fixes
-* CMD + C on OS X causes MMEX popup window to close (Issue #769)
-
-Features:
-* Japanese translation added
-
-Version 1.2.3
-~~~~~~~~~~~~~
-Released: 2015-11-04
-
-Bugfixes:
-* Assertion 'datetime failed' (Issue #536)
-* Delete currency (Issue #569)
-* Add attachments on duplicate transaction (Issue #579)
-* Wrong currency on repeating transactions (Issues #562, #568)
-* EOL support for CSV export/import (Issue #577)
-* ANSI encoding and date with time support for CSV import (Issue #579)
-* Problem with full screen mode on Mac (bug #742)
-* tmp folder permissions(Issue #559)
-
-Features:
-* Currency added Venezuelan Bolivar
-
-Notes:
-* Translations update
-
-
-Version 1.2.2
-~~~~~~~~~~~~~
-Released: 2015-07-29
-
-Bugfixes:
-* Transaction Type Transfer From/To Error (bug #707)
-* Stock Account fix total value
-* Export of small withdrawals have wrong sign (bug #695)
-* Czech translation update
-* Colours on print and print preview are not the same (bug #722)
-* QIF import fixes (bug 712)
-* Cancel button label changed to Close for Currency dialogue (bug #714)
-
-Features:
-* Lithuanian translation added
-
-
-Version 1.2.1
-~~~~~~~~~~~~~
-Released: 2015-06-07
-
-* Bugfixes:
-* Negative 'Initial Balance' (bug #692)
-* Recurring Transactions navigation issue (bug #679)
-* Spelling mistakes (bugs #676, #677)
-* Temporary View Change (bug #684)
-* html format (issue #487)
-
-
-Version 1.2.0
-~~~~~~~~~~~~~
-Released: 2015-04-28
-
-Features:
-* Introducing new account type - Credit Card
-* Monthly Summary of Accounts
-* Stock History Monitoring
-* My Usage Reports
-* MMEX News display on Home page
-* Apply button on Options Dialog saves displayed page.
-* Extra columns displayed in panels.
-* Command to change encrypted database password.
-* Command to compact the database
-* Import transactions from WebApp
-* Repeating transaction created from existing transaction
-* Functionality Change: Repeating Transaction.
-* 'Next Occur Date' redefined as 'Payment Date' and 'Due Date'
-* Database Upgrade: Database version updated to version 3 with auto data correction for Repeating Transactions.
-
-Bugfixes:
-* Many bug fixes
-
-
-Version 1.1.2
-~~~~~~~~~~~~~
-Released: 2014-11-17
-
-Features:
-* Repeating transaction dialog restyling
-* Added transaction filter to repeating transactions panel
-* Added more keywords into GRM
-
-Bugfixes:
-* CashFlow crash
-* Fix for repeating transactions with split categories
-* Fix PayPal QIF import (bug #543)
-* Fix stock update date format (bug #545)
-* Fix budget for substituted category (bug #546)
-* Fix category removal error on budget panel (bug #551)
-* Translations update
-
-
-Version 1.1.1
-~~~~~~~~~~~~~
-Released: 2014-11-02
-
-Features:
-* Full UTF-8 and wide characters support in GRM and LUA
-* Full integration with WebApp
-* Added "unknown" payee\category in QIF, CSV and WebApp import
-* Navigation panel status saving
-* New JS pie charts on report
-* Added option to reallocate account type
-* Added option to change password of encrypted DB
-* Added timeout option for web-calls
-* Added FullScreen support
-* Save transactions colours to database instead of local pc
-
-Bugfixes:
-* Fix for '&' sign in notes (bug #441)
-* Fix new transaction with no payee in list (bug #450)
-* Fix deletion of two categories (bug #452)
-* Fix override categories in home page (bugs #447 #444)
-* Fix transaction filter transfers and payees (bugs #453 #457)
-* Fix for trasnfer between account with different currencies (bugs #462 #472)
-* Fix cashflow report (bug #481)
-* Fix space in amount (bug #493)
-* Fix wrong beahviour of splitted and new transactions
+import React, { useState, useEffect } from 'react';
+import { 
+  Users, 
+  GraduationCap, 
+  BookOpen, 
+  DollarSign, 
+  LayoutDashboard, 
+  Settings, 
+  Bell, 
+  Search, 
+  UserPlus,
+  Menu,
+  X,
+  Sparkles,
+  Loader2,
+  Mail,
+  FileText,
+  Briefcase,
+  UserCog,
+  Calculator,
+  Clock,
+  Award,
+  TrendingUp,
+  TrendingDown,
+  PieChart,
+  PlusCircle,
+  Calendar,
+  Filter,
+  Library,
+  Folder,
+  Archive,
+  File,
+  ExternalLink,
+  Percent,
+  MessageSquare,
+  Brain,
+  BrainCircuit,
+  HelpCircle,
+  FilePlus, 
+  Compass, 
+  Lightbulb, 
+  ClipboardList,
+  PartyPopper,
+  FileSignature,
+  Megaphone, 
+  BookOpenCheck,
+  Eye,
+  Edit,
+  MapPin,
+  Phone,
+  CreditCard,
+  User,
+  CalendarClock, 
+  Monitor,
+  Coffee,
+  Printer, // Print icon
+  Share2, // Share icon
+  FileSpreadsheet, // Excel icon
+  FileType, // PDF/Word icon
+  Download, // Download icon
+  FileBarChart // Report icon
+} from 'lucide-react';
+
+// --- Gemini API Helper Function ---
+const generateGeminiResponse = async (prompt) => {
+  const apiKey = ""; // API Key will be provided by the environment
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+  
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }]
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`API call failed: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+    return data.candidates?.[0]?.content?.parts?.[0]?.text || "មិនអាចបង្កើតទិន្នន័យបានទេ។ សូមព្យាយាមម្តងទៀត។";
+  } catch (error) {
+    console.error("Gemini API Error:", error);
+    return "មានបញ្ហាក្នុងការភ្ជាប់ទៅកាន់ AI។ សូមព្យាយាមម្តងទៀតនៅពេលក្រោយ។";
+  }
+};
+
+// --- Helper: Convert to Khmer Numerals ---
+const toKhmerNum = (num) => {
+  if (!num) return '';
+  const khmerNums = ['០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'];
+  return num.toString().replace(/\d/g, (d) => khmerNums[d]);
+};
+
+// --- Helper: Calculate Age ---
+const calculateAge = (dobString) => {
+  if (!dobString) return 0;
+  const today = new Date();
+  const birthDate = new Date(dobString);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+};
+
+// --- Mock Data ---
+const initialStudents = [
+  { 
+    degreeLevel: 'បរិញ្ញាបត្រ', 
+    batch: '១៥', 
+    session: 'ព្រឹក', 
+    yearLevel: 'ឆ្នាំទី ២', 
+    semester: 'ឆមាសទី ១', 
+    major: 'វិទ្យាសាស្ត្រកុំព្យូទ័រ', 
+    status: 'សកម្ម', 
+    id: 'S001', 
+    nameKh: 'សុខ វិបុល', 
+    nameEn: 'SOK VIBOL', 
+    gender: 'ប្រុស', 
+    dob: '2002-05-10', 
+    pob: 'ស្រុកទឹកឈូ, ខេត្តកំពត', 
+    phone: '012-333-444', 
+    nid: '123456789', 
+    job: 'និស្សិត', 
+    highSchool: 'វិទ្យាល័យព្រះស៊ីសុវត្ថិ', 
+    examCenter: 'មណ្ឌលភ្នំពេញ',
+    examYear: '2019',
+    certNo: '987654',
+    examResult: 'ជាប់',
+    prevDegreeLevel1: 'ភាសាអង់គ្លេស', 
+    prevDegreeLevel2: '-',
+    prevSchool: 'IFL',
+    prevRef: '2020/001',
+    fatherName: 'សុខ សាន្ត', 
+    fatherDob: '1970',
+    fatherJob: 'អាជីវករ',
+    fatherStatus: 'រស់',
+    motherName: 'សៅ នារី', 
+    motherDob: '1975',
+    motherJob: 'មេផ្ទះ',
+    motherStatus: 'រស់',
+    currentAddress: 'ផ្ទះលេខ ១០, ផ្លូវ ១២៣, សង្កាត់ទឹកល្អក់១, ខណ្ឌទួលគោក, ភ្នំពេញ' 
+  },
+  { 
+    degreeLevel: 'បរិញ្ញាបត្ររង',
+    batch: '១៦',
+    session: 'រសៀល',
+    yearLevel: 'ឆ្នាំទី ១',
+    semester: 'ឆមាសទី ២',
+    major: 'គ្រប់គ្រងពាណិជ្ជកម្ម',
+    status: 'សកម្ម',
+    id: 'S002',
+    nameKh: 'ចាន់ ធីតា',
+    nameEn: 'CHAN THIDA',
+    gender: 'ស្រី',
+    dob: '2003-08-22',
+    pob: 'ក្រុងសៀមរាប, ខេត្តសៀមរាប',
+    phone: '093-555-666',
+    nid: '987654321',
+    job: 'បុគ្គលិកក្រុមហ៊ុន',
+    highSchool: 'វិទ្យាល័យ ១០ មករា',
+    examCenter: 'មណ្ឌលសៀមរាប',
+    examYear: '2020',
+    certNo: '654321',
+    examResult: 'ជាប់',
+    prevDegreeLevel1: '-',
+    prevDegreeLevel2: '-',
+    prevSchool: '-',
+    prevRef: '-',
+    fatherName: 'ចាន់ ធារ៉ា',
+    fatherDob: '1968',
+    fatherJob: 'មន្ត្រីរាជការ',
+    fatherStatus: 'រស់',
+    motherName: 'លី សោភា',
+    motherDob: '1972',
+    motherJob: 'គ្រូបង្រៀន',
+    motherStatus: 'រស់',
+    currentAddress: 'បន្ទប់ជួលលេខ ៥, ផ្លូវ ២០០៤, សង្កាត់ទឹកថ្លា, ខណ្ឌសែនសុខ, ភ្នំពេញ'
+  },
+];
+
+const initialTeachers = [
+  { id: 'T001', name: 'បណ្ឌិត សៅ សុភាព', subject: 'បច្ចេកវិទ្យា', phone: '012-333-444', ratePerHour: 25 },
+  { id: 'T002', name: 'អ្នកគ្រូ លឹម សោភា', subject: 'គណនេយ្យ', phone: '010-555-666', ratePerHour: 20 },
+  { id: 'T003', name: 'លោកគ្រូ ហេង វណ្ណា', subject: 'គ្រប់គ្រង', phone: '092-777-888', ratePerHour: 18 },
+];
+
+const initialManagement = [
+  { id: 'M001', name: 'ឯកឧត្តម បណ្ឌិត គឹម សុខា', position: 'នាយកសាលា', email: 'sokha@school.edu.kh' },
+  { id: 'M002', name: 'លោកជំទាវ សួន ម៉ាលី', position: 'នាយករង', email: 'maly@school.edu.kh' },
+  { id: 'M003', name: 'លោក វ៉ាន់ ដារ៉ា', position: 'ប្រធានផ្នែករដ្ឋបាល', email: 'dara@school.edu.kh' },
+];
+
+const initialStaff = [
+  { id: 'ST001', name: 'កញ្ញា ស្រី និច', position: 'បណ្ណារក្ស', department: 'បណ្ណាល័យ', phone: '099-111-222', salary: 450 },
+  { id: 'ST002', name: 'លោក ប៊ុន ធឿន', position: 'IT Support', department: 'បច្ចេកវិទ្យា', phone: '012-999-000', salary: 600 },
+  { id: 'ST003', name: 'អ្នកស្រី កែវ ផល្លា', position: 'គណនេយ្យករ', department: 'ហិរញ្ញវត្ថុ', phone: '016-555-444', salary: 550 },
+];
+
+const initialIncomes = [
+  { id: 'INV-001', student: 'សុខ វិបុល', type: 'ថ្លៃសិក្សា (Tuition)', amount: 500, date: '2023-10-01', cycle: 'ប្រចាំឆមាស' },
+  { id: 'INV-002', student: 'ចាន់ ធីតា', type: 'សេវារដ្ឋបាល', amount: 50, date: '2023-10-02', cycle: 'ប្រចាំឆ្នាំ' },
+  { id: 'INV-003', student: 'ម៉េង លី', type: 'លិខិតបញ្ជាក់ការសិក្សា', amount: 10, date: '2023-10-05', cycle: 'មួយលើក' },
+  { id: 'INV-004', student: 'កែវ រតនា', type: 'ថ្លៃសិក្សា (Tuition)', amount: 600, date: '2023-10-10', cycle: 'ប្រចាំឆមាស' },
+];
+
+const initialExpenses = [
+  { id: 'EXP-001', title: 'សម្ភារៈការិយាល័យ', category: 'សម្ភារៈ', amount: 150, date: '2023-10-03' },
+  { id: 'EXP-002', title: 'ថ្លៃជួលអាគារ E', category: 'ជួលអាគារ', amount: 2000, date: '2023-10-01' },
+  { id: 'EXP-003', title: 'វិក្កយបត្រទឹក', category: 'ទឹក-ភ្លើង', amount: 80, date: '2023-10-25' },
+  { id: 'EXP-004', title: 'វិក្កយបត្រភ្លើង', category: 'ទឹក-ភ្លើង', amount: 350, date: '2023-10-25' },
+];
+
+const staffPayroll = [
+    { id: 'PY-001', staffName: 'កញ្ញា ស្រី និច', baseSalary: 450, bonus: 20, deduction: 0, netSalary: 470, status: 'បានបើក' },
+    { id: 'PY-002', staffName: 'លោក ប៊ុន ធឿន', baseSalary: 600, bonus: 50, deduction: 10, netSalary: 640, status: 'រង់ចាំ' },
+];
+
+const teacherHourlyPay = [
+    { id: 'TP-001', teacherName: 'បណ្ឌិត សៅ សុភាព', hoursWorked: 40, rate: 25, total: 1000, month: 'តុលា' },
+    { id: 'TP-002', teacherName: 'អ្នកគ្រូ លឹម សោភា', hoursWorked: 32, rate: 20, total: 640, month: 'តុលា' },
+    { id: 'TP-003', teacherName: 'លោកគ្រូ ហេង វណ្ណា', hoursWorked: 45, rate: 18, total: 810, month: 'តុលា' },
+];
+
+const initialLibraryItems = [
+    { id: 'LIB-001', title: 'មូលដ្ឋានគ្រឹះ Java Programming', type: 'សៀវភៅមេរៀន', category: 'IT', location: 'ធ្នើ A1-05', status: 'មាន' },
+    { id: 'LIB-002', title: 'គោលការណ៍គ្រប់គ្រងធនធានមនុស្ស', type: 'សៀវភៅមេរៀន', category: 'Management', location: 'ធ្នើ B2-12', status: 'បានខ្ចី' },
+    { id: 'DOC-001', title: 'របាយការណ៍ប្រជុំក្រុមប្រឹក្សាភិបាល Q3', type: 'លិខិតរដ្ឋបាល', category: 'របាយការណ៍', location: 'File Server / Admin', status: 'ឌីជីថល' },
+    { id: 'DOC-002', title: 'សេចក្តីជូនដំណឹងស្តីពីការប្រឡង', type: 'លិខិតរដ្ឋបាល', category: 'សេចក្តីជូនដំណឹង', location: 'ការិយាល័យសិក្សា', status: 'ច្បាប់ដើម' },
+    { id: 'RES-001', title: 'គម្រោងប្លង់អាគារថ្មី', type: 'ផ្សេងៗ', category: 'ប្លង់', location: 'ឃ្លាំងឯកសារ', status: 'រក្សាទុក' },
+];
+
+const timeSlots = [
+  { id: 1, label: '08:00 AM - 09:30 AM', session: 'ព្រឹក ហ្សេសិន ១' },
+  { id: 2, label: '09:30 AM - 09:45 AM', type: 'BREAK' },
+  { id: 3, label: '09:45 AM - 11:15 AM', session: 'ព្រឹក ហ្សេសិន ២' },
+  { id: 4, label: '01:30 PM - 03:00 PM', session: 'រសៀល ហ្សេសិន ៣' },
+  { id: 5, label: '03:00 PM - 03:15 PM', type: 'BREAK' },
+  { id: 6, label: '03:15 PM - 04:45 PM', session: 'រសៀល ហ្សេសិន ៤' },
+];
+
+const mockScheduleData = {
+  weekday: { // Mon-Fri
+    Monday: {
+      1: { subject: 'Java Programming', teacher: 'Dr. Sao Sopheap', room: 'A101' },
+      3: { subject: 'Database Management', teacher: 'Mr. Bun Thoeun', room: 'Lab 2' },
+      4: { subject: 'Web Development', teacher: 'Dr. Sao Sopheap', room: 'Lab 1' }
+    },
+    Tuesday: {
+      1: { subject: 'Accounting I', teacher: 'Ms. Lim Sophea', room: 'B202' },
+      3: { subject: 'Management Principles', teacher: 'Mr. Heng Vanna', room: 'C303' }
+    },
+    Wednesday: {
+      1: { subject: 'Java Programming', teacher: 'Dr. Sao Sopheap', room: 'A101' },
+      4: { subject: 'English for Business', teacher: 'Mr. John Doe', room: 'D404' }
+    },
+    Thursday: {
+      3: { subject: 'Marketing', teacher: 'Ms. Lim Sophea', room: 'B202' }
+    },
+    Friday: {
+      1: { subject: 'Project Management', teacher: 'Mr. Heng Vanna', room: 'C303' },
+      6: { subject: 'Consultation Hour', teacher: 'All Staff', room: 'Office' }
+    }
+  },
+  weekend: { // Sat-Sun
+    Saturday: {
+      1: { subject: 'Advanced Research', teacher: 'Dr. Kim Sokha', room: 'E505' },
+      3: { subject: 'Strategic Management', teacher: 'Dr. Kim Sokha', room: 'E505' },
+      4: { subject: 'Thesis Defense', teacher: 'Committee', room: 'Hall A' },
+      6: { subject: 'Thesis Defense', teacher: 'Committee', room: 'Hall A' }
+    },
+    Sunday: {
+      1: { subject: 'Leadership Seminar', teacher: 'Guest Speaker', room: 'Hall B' },
+      3: { subject: 'Community Service', teacher: 'Student Council', room: 'Field' }
+    }
+  }
+};
+
+// --- Components ---
+
+const Sidebar = ({ activeTab, setActiveTab, isMobileOpen, setIsMobileOpen }) => {
+  const menuItems = [
+    { id: 'dashboard', label: 'ផ្ទាំងគ្រប់គ្រង', icon: <LayoutDashboard size={20} /> },
+    { id: 'schedule', label: 'កាលវិភាគ', icon: <CalendarClock size={20} /> },
+    { id: 'gpa', label: 'គណនា GPA', icon: <PieChart size={20} /> }, 
+    { id: 'library', label: 'បណ្ណាល័យ & ឯកសារ', icon: <Library size={20} /> }, 
+    { id: 'reports', label: 'របាយការណ៍ & នាំចេញ', icon: <FileBarChart size={20} /> }, // New Menu Item
+    { id: 'finance', label: 'ហិរញ្ញវត្ថុ & ចំណូលចំណាយ', icon: <DollarSign size={20} /> },
+    { id: 'academic', label: 'ប្រព័ន្ធសិក្សា', icon: <Award size={20} /> }, 
+    { id: 'management', label: 'គណៈគ្រប់គ្រង', icon: <UserCog size={20} /> },
+    { id: 'staff', label: 'បុគ្គលិក', icon: <Briefcase size={20} /> },
+    { id: 'teachers', label: 'គ្រូបង្រៀន', icon: <GraduationCap size={20} /> },
+    { id: 'payroll', label: 'បើកប្រាក់បៀវត្ស', icon: <Calculator size={20} /> }, 
+    { id: 'students', label: 'គ្រប់គ្រងនិស្សិត', icon: <Users size={20} /> },
+    { id: 'courses', label: 'ជំនួយការ AI', icon: <Sparkles size={20} className="text-yellow-400" /> },
+  ];
+
+  return (
+    <>
+      {isMobileOpen && (
+        <div 
+          className="fixed inset-0 z-20 bg-black bg-opacity-50 md:hidden"
+          onClick={() => setIsMobileOpen(false)}
+        ></div>
+      )}
+      <div className={`fixed inset-y-0 left-0 z-30 w-64 bg-slate-900 text-white transform transition-transform duration-300 ease-in-out md:translate-x-0 md:static md:inset-0 ${isMobileOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+        <div className="flex items-center justify-between h-16 px-6 bg-slate-800">
+          <span className="text-xl font-bold text-blue-400">UniSystem KH</span>
+          <button className="md:hidden" onClick={() => setIsMobileOpen(false)}>
+            <X size={24} />
+          </button>
+        </div>
+        <div className="px-4 py-6 space-y-2 overflow-y-auto max-h-[calc(100vh-140px)]">
+          {menuItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => {
+                setActiveTab(item.id);
+                setIsMobileOpen(false);
+              }}
+              className={`flex items-center w-full px-4 py-3 text-sm font-medium transition-colors rounded-lg ${
+                activeTab === item.id
+                  ? 'bg-blue-600 text-white'
+                  : 'text-slate-400 hover:bg-slate-800 hover:text-white'
+              }`}
+            >
+              <span className="mr-3">{item.icon}</span>
+              {item.label}
+              {(item.id === 'courses' || item.id === 'library' || item.id === 'finance' || item.id === 'teachers' || item.id === 'academic' || item.id === 'staff' || item.id === 'management' || item.id === 'payroll' || item.id === 'schedule' || item.id === 'reports') && <Sparkles size={14} className="ml-auto text-yellow-400 opacity-60" />}
+            </button>
+          ))}
+        </div>
+        <div className="absolute bottom-0 w-full p-4 bg-slate-800">
+          <div className="flex items-center">
+            <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-xs font-bold">AD</div>
+            <div className="ml-3">
+              <p className="text-sm font-medium text-white">Admin User</p>
+              <p className="text-xs text-slate-400">admin@school.edu.kh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+// --- NEW: Reports View Component ---
+const ReportsView = () => {
+  const [reportType, setReportType] = useState('student');
+  const [processing, setProcessing] = useState(null);
+
+  // Simulation of export actions
+  const handleAction = (action) => {
+    setProcessing(action);
+    // Simulate delay
+    setTimeout(() => {
+      setProcessing(null);
+      // In a real app, this would trigger a download or print dialog
+    }, 2000);
+  };
+
+  const getReportTitle = () => {
+    switch(reportType) {
+      case 'student': return 'របាយការណ៍សរុបនិស្សិត (Student Summary)';
+      case 'finance': return 'របាយការណ៍ហិរញ្ញវត្ថុប្រចាំខែ (Monthly Finance)';
+      case 'staff': return 'របាយការណ៍បុគ្គលិក & ប្រាក់បៀវត្ស (Staff & Payroll)';
+      case 'academic': return 'របាយការណ៍លទ្ធផលសិក្សា (Academic Result)';
+      default: return 'របាយការណ៍ទូទៅ';
+    }
+  };
+
+  return (
+    <div className="space-y-6">
+       <h2 className="text-2xl font-bold text-slate-800 flex items-center">
+          <FileBarChart className="mr-3 text-blue-600" />
+          របាយការណ៍ & នាំចេញឯកសារ (Reports & Exports)
+       </h2>
+
+       {/* 1. Report Selector */}
+       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+         {[
+           { id: 'student', label: 'និស្សិត', icon: <Users size={20} /> },
+           { id: 'finance', label: 'ហិរញ្ញវត្ថុ', icon: <DollarSign size={20} /> },
+           { id: 'staff', label: 'បុគ្គលិក', icon: <Briefcase size={20} /> },
+           { id: 'academic', label: 'សិក្សា', icon: <GraduationCap size={20} /> }
+         ].map(type => (
+            <button 
+              key={type.id}
+              onClick={() => setReportType(type.id)}
+              className={`p-4 rounded-xl border-2 flex flex-col items-center justify-center transition-all ${
+                reportType === type.id 
+                ? 'border-blue-600 bg-blue-50 text-blue-700 font-bold shadow-sm' 
+                : 'border-slate-200 bg-white text-slate-600 hover:border-blue-300'
+              }`}
+            >
+               <div className={`mb-2 p-2 rounded-full ${reportType === type.id ? 'bg-blue-200' : 'bg-slate-100'}`}>
+                 {type.icon}
+               </div>
+               {type.label}
+            </button>
+         ))}
+       </div>
+
+       {/* 2. Action Bar (Export Options) */}
+       <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 flex flex-wrap gap-3 items-center justify-between">
+          <div className="flex items-center gap-2">
+             <span className="text-sm font-bold text-slate-700">រក្សាទុកជា (Save As):</span>
+             <button onClick={() => handleAction('pdf')} className="flex items-center px-3 py-2 bg-red-50 text-red-700 rounded-lg border border-red-200 hover:bg-red-100 transition-colors text-sm font-medium">
+                {processing === 'pdf' ? <Loader2 className="animate-spin mr-2" size={16} /> : <FileType size={16} className="mr-2" />}
+                PDF
+             </button>
+             <button onClick={() => handleAction('excel')} className="flex items-center px-3 py-2 bg-green-50 text-green-700 rounded-lg border border-green-200 hover:bg-green-100 transition-colors text-sm font-medium">
+                {processing === 'excel' ? <Loader2 className="animate-spin mr-2" size={16} /> : <FileSpreadsheet size={16} className="mr-2" />}
+                Excel
+             </button>
+             <button onClick={() => handleAction('word')} className="flex items-center px-3 py-2 bg-blue-50 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-100 transition-colors text-sm font-medium">
+                {processing === 'word' ? <Loader2 className="animate-spin mr-2" size={16} /> : <FileText size={16} className="mr-2" />}
+                Word
+             </button>
+          </div>
+          <div className="flex items-center gap-2 border-l pl-4 border-slate-200">
+             <button onClick={() => handleAction('share')} className="flex items-center px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors text-sm">
+                {processing === 'share' ? <Loader2 className="animate-spin mr-2" size={16} /> : <Share2 size={16} className="mr-2" />}
+                ចែករំលែក (Share)
+             </button>
+             <button onClick={() => { handleAction('print'); }} className="flex items-center px-3 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-900 transition-colors text-sm font-medium shadow-sm">
+                 {processing === 'print' ? <Loader2 className="animate-spin mr-2" size={16} /> : <Printer size={16} className="mr-2" />}
+                 បោះពុម្ព (Print)
+             </button>
+          </div>
+       </div>
+
+       {/* Notification Toast Simulation */}
+       {processing && (
+          <div className="fixed bottom-6 right-6 bg-slate-800 text-white px-6 py-3 rounded-lg shadow-lg flex items-center animate-bounce z-50">
+             <Download className="mr-3" size={20} />
+             <div>
+                <p className="font-bold text-sm">កំពុងដំណើរការ...</p>
+                <p className="text-xs text-slate-300">កំពុងបង្កើតឯកសារ {processing.toUpperCase()} សូមរង់ចាំ។</p>
+             </div>
+          </div>
+       )}
+
+       {/* 3. Report Preview (A4 Paper Style) */}
+       <div className="bg-slate-200 p-8 rounded-xl overflow-auto flex justify-center min-h-[600px]">
+          <div className="bg-white w-[210mm] min-h-[297mm] shadow-2xl p-[20mm] relative">
+             {/* Header */}
+             <div className="text-center border-b-2 border-slate-800 pb-6 mb-6">
+                <h1 className="text-2xl font-bold font-serif mb-2 text-slate-900">សាកលវិទ្យាល័យ ជាតិកម្ពុជា</h1>
+                <h2 className="text-xl font-bold text-blue-700 font-serif">CAMBODIA NATIONAL UNIVERSITY</h2>
+                <div className="mt-4 text-sm text-slate-500">
+                   អាសយដ្ឋាន: ផ្លូវ ១២៣, សង្កាត់ទឹកល្អក់១, ខណ្ឌទួលគោក, ភ្នំពេញ | ទូរស័ព្ទ: 012 345 678
+                </div>
+             </div>
+             
+             {/* Report Meta */}
+             <div className="flex justify-between items-end mb-8">
+                <div>
+                   <h3 className="text-lg font-bold text-slate-800 underline decoration-2 underline-offset-4">{getReportTitle()}</h3>
+                   <p className="text-sm text-slate-500 mt-2">កាលបរិច្ឆេទបង្កើត: {new Date().toLocaleDateString('km-KH')}</p>
+                </div>
+                <div className="text-right">
+                   <p className="text-sm font-bold">លេខយោង: RPT-{new Date().getFullYear()}-{Math.floor(Math.random() * 1000)}</p>
+                   <p className="text-xs text-slate-400">បង្កើតដោយ: Admin User</p>
+                </div>
+             </div>
+
+             {/* Dynamic Content Based on Type */}
+             <div className="space-y-4">
+               {reportType === 'student' && (
+                 <table className="w-full border-collapse border border-slate-300 text-sm">
+                   <thead className="bg-slate-100">
+                     <tr>
+                       <th className="border border-slate-300 p-2 text-left">ល.រ</th>
+                       <th className="border border-slate-300 p-2 text-left">អត្តលេខ</th>
+                       <th className="border border-slate-300 p-2 text-left">ឈ្មោះនិស្សិត</th>
+                       <th className="border border-slate-300 p-2 text-left">ភេទ</th>
+                       <th className="border border-slate-300 p-2 text-left">ជំនាញ</th>
+                       <th className="border border-slate-300 p-2 text-center">ស្ថានភាព</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                      {initialStudents.map((s, i) => (
+                        <tr key={s.id}>
+                          <td className="border border-slate-300 p-2 text-center">{toKhmerNum(i + 1)}</td>
+                          <td className="border border-slate-300 p-2">{s.id}</td>
+                          <td className="border border-slate-300 p-2 font-bold">{s.nameKh}</td>
+                          <td className="border border-slate-300 p-2">{s.gender}</td>
+                          <td className="border border-slate-300 p-2">{s.major}</td>
+                          <td className="border border-slate-300 p-2 text-center">{s.status}</td>
+                        </tr>
+                      ))}
+                      {/* Fake Rows to fill paper */}
+                      {[...Array(5)].map((_, i) => (
+                         <tr key={`fake-${i}`}>
+                           <td className="border border-slate-300 p-2 text-center">{toKhmerNum(i + 3)}</td>
+                           <td className="border border-slate-300 p-2">S00{i+3}</td>
+                           <td className="border border-slate-300 p-2 text-slate-300">........................</td>
+                           <td className="border border-slate-300 p-2 text-slate-300">...</td>
+                           <td className="border border-slate-300 p-2 text-slate-300">........................</td>
+                           <td className="border border-slate-300 p-2 text-slate-300">...</td>
+                         </tr>
+                      ))}
+                   </tbody>
+                 </table>
+               )}
+
+               {reportType === 'finance' && (
+                  <div className="space-y-6">
+                     <div className="grid grid-cols-2 gap-4">
+                        <div className="border border-slate-300 p-4 rounded bg-green-50">
+                           <p className="text-slate-500 text-xs uppercase">ចំណូលសរុប (Income)</p>
+                           <p className="text-xl font-bold text-green-700">$2,450.00</p>
+                        </div>
+                        <div className="border border-slate-300 p-4 rounded bg-red-50">
+                           <p className="text-slate-500 text-xs uppercase">ចំណាយសរុប (Expense)</p>
+                           <p className="text-xl font-bold text-red-700">$2,580.00</p>
+                        </div>
+                     </div>
+                     <table className="w-full border-collapse border border-slate-300 text-sm">
+                        <thead className="bg-slate-100">
+                          <tr>
+                            <th className="border border-slate-300 p-2 text-left">កាលបរិច្ឆេទ</th>
+                            <th className="border border-slate-300 p-2 text-left">បរិយាយ</th>
+                            <th className="border border-slate-300 p-2 text-right">ចំណូល</th>
+                            <th className="border border-slate-300 p-2 text-right">ចំណាយ</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                           <tr className="bg-green-50/30">
+                              <td className="border border-slate-300 p-2">01/10/2023</td>
+                              <td className="border border-slate-300 p-2">ចំណូលថ្លៃសិក្សា (Tuition Fee)</td>
+                              <td className="border border-slate-300 p-2 text-right text-green-600">$500.00</td>
+                              <td className="border border-slate-300 p-2 text-right">-</td>
+                           </tr>
+                           <tr className="bg-red-50/30">
+                              <td className="border border-slate-300 p-2">03/10/2023</td>
+                              <td className="border border-slate-300 p-2">ទិញសម្ភារៈការិយាល័យ</td>
+                              <td className="border border-slate-300 p-2 text-right">-</td>
+                              <td className="border border-slate-300 p-2 text-right text-red-600">$150.00</td>
+                           </tr>
+                           <tr className="bg-green-50/30">
+                              <td className="border border-slate-300 p-2">10/10/2023</td>
+                              <td className="border border-slate-300 p-2">ចំណូលថ្លៃសិក្សា (Tuition Fee)</td>
+                              <td className="border border-slate-300 p-2 text-right text-green-600">$600.00</td>
+                              <td className="border border-slate-300 p-2 text-right">-</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               )}
+
+               {(reportType === 'staff' || reportType === 'academic') && (
+                  <div className="text-center py-20 text-slate-400">
+                     <FileBarChart size={64} className="mx-auto mb-4 opacity-20" />
+                     <p>ទិន្នន័យគំរូសម្រាប់ផ្នែកនេះនឹងបង្ហាញនៅពេលមានទិន្នន័យជាក់ស្តែង។</p>
+                     <p className="text-xs mt-2">សូមជ្រើសរើសផ្នែកផ្សេងដើម្បីមើលគំរូ។</p>
+                  </div>
+               )}
+             </div>
+
+             {/* Footer */}
+             <div className="absolute bottom-[20mm] left-[20mm] right-[20mm]">
+                <div className="flex justify-between mt-10">
+                   <div className="text-center">
+                      <p className="text-sm font-bold mb-16">ហត្ថលេខាអ្នករៀបចំ</p>
+                      <p className="text-sm">.......................................</p>
+                   </div>
+                   <div className="text-center">
+                      <p className="text-sm font-bold mb-16">ហត្ថលេខានាយកសាលា</p>
+                      <p className="text-sm">.......................................</p>
+                   </div>
+                </div>
+                <div className="text-center mt-10 border-t border-slate-200 pt-4 text-xs text-slate-400">
+                   របាយការណ៍នេះបង្កើតដោយប្រព័ន្ធស្វ័យប្រវត្តិ UniSystem KH នៅថ្ងៃ {new Date().toLocaleString('km-KH')}
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+  );
+};
+
+
+const DashboardView = () => {
+  const [insight, setInsight] = useState('');
+  const [loadingInsight, setLoadingInsight] = useState(false);
+  const [suggestedEvents, setSuggestedEvents] = useState('');
+  const [loadingEvents, setLoadingEvents] = useState(false);
+  const [announcementTopic, setAnnouncementTopic] = useState('');
+  const [announcement, setAnnouncement] = useState('');
+  const [loadingAnnouncement, setLoadingAnnouncement] = useState(false);
+
+  const stats = [
+    { label: 'និស្សិតសរុប', value: '1,234', icon: <Users className="text-blue-500" />, color: 'bg-blue-100' },
+    { label: 'គ្រូបង្រៀន', value: '56', icon: <GraduationCap className="text-green-500" />, color: 'bg-green-100' },
+    { label: 'ឯកសារបណ្ណាល័យ', value: '520', icon: <Library className="text-indigo-500" />, color: 'bg-indigo-100' },
+    { label: 'ចំណូលខែនេះ', value: '$12,500', icon: <DollarSign className="text-yellow-500" />, color: 'bg-yellow-100' },
+  ];
+
+  const getKhmerMonth = () => ['មករា', 'កុម្ភៈ', 'មីនា', 'មេសា', 'ឧសភា', 'មិថុនា', 'កក្កដា', 'សីហា', 'កញ្ញា', 'តុលា', 'វិច្ឆិកា', 'ធ្នូ'][new Date().getMonth()];
+  const getKhmerDate = () => {
+    const days = ['អាទិត្យ', 'ច័ន្ទ', 'អង្គារ', 'ពុធ', 'ព្រហស្បតិ៍', 'សុក្រ', 'សៅរ៍'];
+    const date = new Date();
+    return `ថ្ងៃ${days[date.getDay()]} ទី${toKhmerNum(date.getDate())} ខែ${getKhmerMonth()} ឆ្នាំ${toKhmerNum(date.getFullYear())}`;
+  };
+
+  const renderCalendarDays = () => {
+    const date = new Date();
+    const currentDay = date.getDate();
+    const daysInMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    const firstDayIndex = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+    const days = [];
+    for (let i = 0; i < firstDayIndex; i++) days.push(<div key={`empty-${i}`} className="h-9 w-9"></div>);
+    for (let i = 1; i <= daysInMonth; i++) {
+        const isToday = i === currentDay;
+        days.push(<div key={`day-${i}`} className={`h-9 w-9 flex items-center justify-center rounded-full text-sm font-bold cursor-pointer transition-colors ${isToday ? 'bg-blue-600 text-white shadow-md' : 'text-slate-700 hover:bg-slate-100'}`}>{toKhmerNum(i)}</div>);
+    }
+    return days;
+  };
+
+  const handleGenerateInsight = async () => {
+      setLoadingInsight(true); setInsight('');
+      const prompt = "Give a short, motivational quote or management tip for school leaders in Khmer. Use an encouraging tone and emojis.";
+      const response = await generateGeminiResponse(prompt);
+      setInsight(response); setLoadingInsight(false);
+  };
+
+  const handleSuggestEvents = async () => {
+      setLoadingEvents(true); setSuggestedEvents('');
+      const prompt = `Suggest 3 school activities or events suitable for the month of "${getKhmerMonth()}" in Cambodia (e.g. holidays, academic milestones). Language: Khmer. Format: Bullet points with emojis.`;
+      const response = await generateGeminiResponse(prompt);
+      setSuggestedEvents(response); setLoadingEvents(false);
+  };
+
+  const handleGenerateAnnouncement = async () => {
+    if (!announcementTopic) return;
+    setLoadingAnnouncement(true); setAnnouncement('');
+    const prompt = `Write a formal school announcement/notice in Khmer about: "${announcementTopic}". Include: Formal Heading, Body (polite, clear, and administrative tone), Date and Closing. Use emojis.`;
+    const response = await generateGeminiResponse(prompt);
+    setAnnouncement(response); setLoadingAnnouncement(false);
+  };
+
+  return (
+    <div className="space-y-6">
+      <h2 className="text-2xl font-bold text-slate-800">ទិដ្ឋភាពទូទៅ</h2>
+      <div className="bg-gradient-to-r from-violet-500 to-fuchsia-600 rounded-xl p-6 text-white shadow-lg relative overflow-hidden">
+          <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+              <div className="flex-1">
+                  <h3 className="text-lg font-bold flex items-center mb-2 text-violet-100"><Lightbulb className="mr-2 text-yellow-300" size={24} /> AI ជំនួយការប្រចាំថ្ងៃ (Daily Insight)</h3>
+                  {insight ? <p className="text-white text-lg font-medium leading-relaxed italic">"{insight}"</p> : <p className="text-violet-100 text-sm opacity-80">ចុចប៊ូតុងដើម្បីទទួលបានគន្លឹះដឹកនាំ ឬពាក្យលើកទឹកចិត្តប្រចាំថ្ងៃ។</p>}
+              </div>
+              <button onClick={handleGenerateInsight} disabled={loadingInsight} className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all backdrop-blur-sm border border-white/40 flex items-center whitespace-nowrap">{loadingInsight ? <Loader2 className="animate-spin mr-2" size={16} /> : <Sparkles className="mr-2" size={16} />} ទទួលសារថ្មី</button>
+          </div>
+          <div className="absolute right-0 top-0 opacity-10 transform translate-x-10 -translate-y-10"><Brain size={150} /></div>
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">{stats.map((stat, index) => (<div key={index} className="p-6 bg-white rounded-xl shadow-sm border border-slate-200"><div className="flex items-center justify-between"><div><p className="text-sm font-medium text-slate-500">{stat.label}</p><p className="text-2xl font-bold text-slate-800 mt-1">{stat.value}</p></div><div className={`p-3 rounded-full ${stat.color}`}>{stat.icon}</div></div></div>))}</div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="lg:col-span-2 space-y-6">
+            <div className="bg-gradient-to-r from-pink-50 to-rose-50 p-6 rounded-xl border border-pink-100 shadow-sm">
+                <div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center mb-4"><h3 className="font-bold text-pink-900 flex items-center text-lg"><Megaphone className="mr-2" size={24} /> AI បង្កើតសេចក្តីជូនដំណឹង (Announcement Generator)</h3></div>
+                <div className="flex flex-col md:flex-row gap-3"><input type="text" placeholder="ប្រធានបទ (ឧទាហរណ៍: ឈប់សម្រាកបុណ្យជាតិ...)" className="w-full md:flex-1 px-4 py-2 border border-pink-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" value={announcementTopic} onChange={(e) => setAnnouncementTopic(e.target.value)} /><button onClick={handleGenerateAnnouncement} disabled={loadingAnnouncement || !announcementTopic} className="px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors disabled:opacity-70 flex items-center justify-center font-medium whitespace-nowrap">{loadingAnnouncement ? <Loader2 className="animate-spin mr-2" size={18} /> : <Sparkles className="mr-2" size={18} />} បង្កើតជូនដំណឹង</button></div>
+                {announcement && (<div className="mt-4 bg-white p-5 rounded-xl border border-pink-200 text-slate-700 text-sm whitespace-pre-wrap leading-relaxed shadow-sm animate-in fade-in slide-in-from-top-2"><div className="flex justify-between items-start mb-2 pb-2 border-b border-pink-50"><h4 className="font-bold text-pink-800">លទ្ធផល៖</h4><button onClick={() => setAnnouncement('')} className="text-slate-400 hover:text-slate-600"><X size={16} /></button></div>{announcement}</div>)}
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200"><h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center justify-between"><span>សកម្មភាពថ្មីៗ</span><button className="text-sm text-blue-600 hover:underline">មើលទាំងអស់</button></h3><div className="space-y-4"><div className="flex items-start pb-4 border-b border-slate-100"><div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3 mt-1"><UserPlus size={18} /></div><div><p className="text-slate-800 font-medium">និស្សិតថ្មី ៥ នាក់បានចុះឈ្មោះ</p><p className="text-slate-500 text-sm">ថ្នាក់បរិញ្ញាបត្ររង ជំនាញគ្រប់គ្រង</p><p className="text-slate-400 text-xs mt-1">២ ម៉ោងមុន</p></div></div><div className="flex items-start pb-4 border-b border-slate-100"><div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3 mt-1"><DollarSign size={18} /></div><div><p className="text-slate-800 font-medium">ទទួលបានការបង់ថ្លៃសិក្សា</p><p className="text-slate-500 text-sm">ពីនិស្សិតឈ្មោះ សុខ វិបុល ($500)</p><p className="text-slate-400 text-xs mt-1">៥ ម៉ោងមុន</p></div></div></div></div>
+          </div>
+          <div className="lg:col-span-1"><div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-slate-800 flex items-center text-lg"><Calendar className="mr-2 text-red-600" size={20}/> ប្រតិទិនខ្មែរ</h3></div><div className="bg-blue-800 rounded-t-xl p-4 text-center border-b-4 border-red-600"><h4 className="text-white font-bold text-2xl mb-1">{getKhmerMonth()}</h4><p className="text-blue-100 font-medium text-sm">{getKhmerDate()}</p></div><div className="bg-slate-50 p-4 rounded-b-xl border border-t-0 border-slate-200"><div className="grid grid-cols-7 gap-1 text-center text-sm mb-2">{['អា', 'ច', 'អ', 'ព', 'ព្រ', 'សុ', 'ស'].map((d, i) => (<div key={d} className={`text-xs font-bold py-1 ${i===0 ? 'text-red-600' : 'text-slate-500'}`}>{d}</div>))}</div><div className="grid grid-cols-7 gap-1 justify-items-center">{renderCalendarDays()}</div></div><div className="mt-4 pt-4 border-t border-slate-100"><button onClick={handleSuggestEvents} disabled={loadingEvents} className="flex items-center justify-center w-full py-2.5 bg-orange-50 text-orange-700 font-medium rounded-lg hover:bg-orange-100 transition-colors mb-4 border border-orange-200">{loadingEvents ? <Loader2 size={16} className="animate-spin mr-2" /> : <PartyPopper size={16} className="mr-2" />} ស្នើព្រឹត្តិការណ៍សម្រាប់ខែនេះ</button>{suggestedEvents ? (<div className="bg-orange-50 p-3 rounded-lg border border-orange-100 text-sm text-slate-700 mb-3 animate-in fade-in"><h5 className="font-bold text-orange-800 mb-2 text-xs uppercase">សកម្មភាពដែលបានស្នើ៖</h5><div className="whitespace-pre-wrap leading-relaxed">{suggestedEvents}</div></div>) : (<><h5 className="font-bold text-slate-700 text-sm mb-3">ព្រឹត្តិការណ៍ខាងមុខ</h5><div className="space-y-3"><div className="flex items-center gap-3 p-2 hover:bg-slate-50 rounded-lg transition-colors cursor-pointer"><div className="w-12 h-12 bg-blue-50 rounded-lg flex flex-col items-center justify-center text-blue-600 border border-blue-100"><span className="font-bold text-lg leading-none">{toKhmerNum(15)}</span><span className="text-[10px] uppercase">ធ្នូ</span></div><div><p className="font-medium text-slate-800 text-sm">ប្រជុំគណៈគ្រប់គ្រង</p><p className="text-xs text-slate-500">ម៉ោង ៩:០០ ព្រឹក</p></div></div></div></>)}</div></div></div>
+      </div>
+    </div>
+  );
+};
+
+const ScheduleView = () => {
+  const [activeShift, setActiveShift] = useState('weekday'); 
+
+  const shifts = [
+    { id: 'weekday', label: 'វេនសិក្សា ច័ន្ទ-សុក្រ (Weekday)' },
+    { id: 'weekend', label: 'វេនសិក្សា សៅរ៍-អាទិត្យ (Weekend)' }
+  ];
+
+  const days = activeShift === 'weekday' 
+    ? ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+    : ['Saturday', 'Sunday'];
+
+  const dayLabels = {
+    'Monday': 'ថ្ងៃច័ន្ទ',
+    'Tuesday': 'ថ្ងៃអង្គារ',
+    'Wednesday': 'ថ្ងៃពុធ',
+    'Thursday': 'ថ្ងៃព្រហស្បតិ៍',
+    'Friday': 'ថ្ងៃសុក្រ',
+    'Saturday': 'ថ្ងៃសៅរ៍',
+    'Sunday': 'ថ្ងៃអាទិត្យ'
+  };
+
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <h2 className="text-2xl font-bold text-slate-800 flex items-center">
+          <CalendarClock className="mr-3 text-blue-600" />
+          កាលវិភាគ & ម៉ោងបង្រៀនសាស្ត្រាចារ្យ
+        </h2>
+        <div className="bg-slate-100 p-1 rounded-lg flex">
+          {shifts.map((shift) => (
+            <button
+              key={shift.id}
+              onClick={() => setActiveShift(shift.id)}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
+                activeShift === shift.id
+                  ? 'bg-white text-blue-700 shadow-sm'
+                  : 'text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              {shift.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div className="overflow-x-auto">
+          <div className="min-w-[1000px]">
+            <div className="grid grid-cols-[150px_repeat(auto-fit,minmax(180px,1fr))] border-b border-slate-200">
+              <div className="p-4 bg-slate-50 font-bold text-slate-700 border-r border-slate-200 flex items-center justify-center">
+                ម៉ោង / ថ្ងៃ
+              </div>
+              {days.map(day => (
+                <div key={day} className="p-4 bg-slate-50 font-bold text-slate-700 border-r border-slate-200 last:border-r-0 text-center uppercase">
+                  {dayLabels[day]}
+                </div>
+              ))}
+            </div>
+            {timeSlots.map((slot) => {
+              const isBreak = slot.type === 'BREAK';
+              return (
+                <div key={slot.id} className={`grid grid-cols-[150px_repeat(auto-fit,minmax(180px,1fr))] border-b border-slate-100 last:border-b-0 ${isBreak ? 'bg-orange-50/50' : 'hover:bg-slate-50'}`}>
+                  <div className={`p-4 border-r border-slate-200 flex flex-col justify-center text-sm ${isBreak ? 'text-orange-600 font-bold items-center' : 'text-slate-600'}`}>
+                    {isBreak ? (
+                      <div className="flex items-center"><Coffee size={16} className="mr-2"/> ចេញលេង</div>
+                    ) : (
+                      <>
+                        <span className="font-bold text-slate-800">{slot.label}</span>
+                        <span className="text-xs text-slate-500 mt-1">{slot.session}</span>
+                      </>
+                    )}
+                  </div>
+                  {isBreak ? (
+                    <div className="col-span-full p-2 flex items-center justify-center text-orange-400 text-xs font-medium tracking-widest uppercase">
+                      Break Time ({slot.label})
+                    </div>
+                  ) : (
+                    days.map((day, idx) => {
+                      const schedule = mockScheduleData[activeShift][day]?.[slot.id];
+                      return (
+                        <div key={`${day}-${slot.id}`} className="p-3 border-r border-slate-200 last:border-r-0 relative group">
+                          {schedule ? (
+                            <div className="bg-blue-50 p-3 rounded-lg border border-blue-100 h-full flex flex-col justify-between hover:shadow-md transition-shadow cursor-pointer">
+                              <div>
+                                <h4 className="font-bold text-blue-800 text-sm mb-1 line-clamp-2">{schedule.subject}</h4>
+                                <div className="flex items-center text-xs text-slate-600 mb-1">
+                                  <User size={12} className="mr-1.5" />
+                                  {schedule.teacher}
+                                </div>
+                              </div>
+                              <div className="mt-2 flex items-center justify-between">
+                                <span className="flex items-center text-xs font-mono text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">
+                                  <MapPin size={10} className="mr-1" /> {schedule.room}
+                                </span>
+                                <button className="opacity-0 group-hover:opacity-100 transition-opacity p-1 bg-white rounded-full text-blue-600 hover:text-blue-800 shadow-sm">
+                                  <Edit size={12} />
+                                </button>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="h-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                              <button className="flex items-center px-3 py-1.5 bg-slate-100 text-slate-500 rounded-lg hover:bg-slate-200 text-xs font-medium border border-slate-200">
+                                <PlusCircle size={14} className="mr-1" />
+                                បន្ថែម
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+      <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 flex flex-col md:flex-row gap-6 text-sm text-slate-700">
+         <div className="flex items-start">
+            <Clock className="text-blue-600 mr-2 mt-0.5" size={18} />
+            <div>
+              <h5 className="font-bold mb-1">ម៉ោងសិក្សាសរុប</h5>
+              <p className="text-xs">១ ថ្ងៃ មាន ៤ ហ្សេសិន (ព្រឹក ២, រសៀល ២)។</p>
+            </div>
+         </div>
+         <div className="flex items-start">
+            <Monitor className="text-blue-600 mr-2 mt-0.5" size={18} />
+            <div>
+              <h5 className="font-bold mb-1">វេនសិក្សា</h5>
+              <p className="text-xs">វេនទី១ (សៅរ៍-អាទិត្យ) និង វេនទី២ (ច័ន្ទ-សុក្រ)។</p>
+            </div>
+         </div>
+      </div>
+    </div>
+  );
+};
+
+
+const GPACalculatorView = () => {
+    const [courses, setCourses] = useState([{ id: 1, name: 'មុខវិជ្ជាទី ១ (Subject 1)', credit: 3, grade: 'A' }, { id: 2, name: 'មុខវិជ្ជាទី ២ (Subject 2)', credit: 3, grade: 'B' }, { id: 3, name: 'មុខវិជ្ជាទី ៣ (Subject 3)', credit: 3, grade: 'C' }, { id: 4, name: 'មុខវិជ្ជាទី ៤ (Subject 4)', credit: 3, grade: 'A' }]);
+    const gradePoints = { 'A+': 4.0, 'A': 4.0, 'A-': 3.7, 'B+': 3.5, 'B': 3.0, 'B-': 2.75, 'C+': 2.5, 'C': 2.0, 'C-': 1.75, 'D': 1.0, 'F': 0.0 };
+    const addCourse = () => { const newId = courses.length > 0 ? Math.max(...courses.map(c => c.id)) + 1 : 1; setCourses([...courses, { id: newId, name: '', credit: 3, grade: 'B' }]); };
+    const removeCourse = (id) => { setCourses(courses.filter(c => c.id !== id)); };
+    const updateCourse = (id, field, value) => { setCourses(courses.map(c => c.id === id ? { ...c, [field]: value } : c)); };
+    const calculateResult = () => { let totalPoints = 0; let totalCredits = 0; courses.forEach(course => { const points = gradePoints[course.grade] || 0; const credits = parseFloat(course.credit) || 0; totalPoints += points * credits; totalCredits += credits; }); const gpa = totalCredits > 0 ? (totalPoints / totalCredits).toFixed(2) : '0.00'; return { gpa, totalCredits, totalPoints: totalPoints.toFixed(1) }; };
+    const result = calculateResult();
+    return (<div className="space-y-6"><h2 className="text-2xl font-bold text-slate-800 flex items-center"><PieChart className="mr-3 text-blue-600" /> គណនាមធ្យមភាគ GPA (GPA Calculator)</h2><div className="grid grid-cols-1 lg:grid-cols-3 gap-6"><div className="lg:col-span-2"><div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"><div className="p-4 bg-slate-50 border-b border-slate-200 flex justify-between items-center"><h3 className="font-bold text-slate-700">បញ្ចូលពិន្ទុតាមមុខវិជ្ជា</h3><button onClick={addCourse} className="flex items-center text-sm bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700 transition-colors"><PlusCircle size={16} className="mr-1" /> បន្ថែមមុខវិជ្ជា</button></div><div className="p-4"><div className="space-y-3">{courses.map((course, index) => (<div key={course.id} className="flex flex-col sm:flex-row gap-3 items-end sm:items-center bg-slate-50 p-3 rounded-lg border border-slate-100"><div className="flex-1 w-full"><label className="block text-xs font-medium text-slate-500 mb-1">ឈ្មោះមុខវិជ្ជា (Subject)</label><input type="text" value={course.name} onChange={(e) => updateCourse(course.id, 'name', e.target.value)} placeholder={`មុខវិជ្ជាទី ${index + 1}`} className="w-full px-3 py-2 border border-slate-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm" /></div><div className="w-full sm:w-24"><label className="block text-xs font-medium text-slate-500 mb-1">ក្រេឌីត (Credit)</label><select value={course.credit} onChange={(e) => updateCourse(course.id, 'credit', e.target.value)} className="w-full px-3 py-2 border border-slate-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm">{[1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 6].map(c => (<option key={c} value={c}>{c}</option>))}</select></div><div className="w-full sm:w-32"><label className="block text-xs font-medium text-slate-500 mb-1">និទ្ទេស (Grade)</label><select value={course.grade} onChange={(e) => updateCourse(course.id, 'grade', e.target.value)} className="w-full px-3 py-2 border border-slate-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm font-bold text-blue-700">{Object.keys(gradePoints).map(g => (<option key={g} value={g}>{g} ({gradePoints[g]})</option>))}</select></div><button onClick={() => removeCourse(course.id)} className="p-2 text-red-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors mb-0.5"><X size={20} /></button></div>))}</div></div></div></div><div className="lg:col-span-1"><div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl p-6 text-white shadow-lg sticky top-6"><h3 className="text-lg font-medium text-blue-100 mb-2">លទ្ធផល GPA សរុប</h3><div className="flex items-baseline mb-6"><span className="text-5xl font-bold">{result.gpa}</span><span className="text-blue-200 ml-2 text-sm">/ 4.00</span></div><div className="space-y-3 pt-4 border-t border-blue-500/30"><div className="flex justify-between text-sm"><span className="text-blue-100">ក្រេឌីតសរុប (Total Credits)</span><span className="font-bold">{result.totalCredits}</span></div><div className="flex justify-between text-sm"><span className="text-blue-100">ពិន្ទុគុណសរុប (Total Points)</span><span className="font-bold">{result.totalPoints}</span></div></div><div className="mt-8 bg-white/10 p-4 rounded-lg backdrop-blur-sm"><h4 className="font-bold text-sm mb-2 flex items-center"><BookOpen size={14} className="mr-2"/> ប្រព័ន្ធពិន្ទុយោង</h4><div className="grid grid-cols-2 gap-2 text-xs text-blue-100"><div>A = 4.0 (90-100%)</div><div>B = 3.0 (73-76%)</div><div>C = 2.0 (63-66%)</div><div>D = 1.0 (50-59%)</div></div></div></div></div></div></div>);
+};
+
+const FinanceView = () => {
+  const [activeFinanceTab, setActiveFinanceTab] = useState('overview'); 
+  const [financialAdvice, setFinancialAdvice] = useState('');
+  const [loadingAdvice, setLoadingAdvice] = useState(false);
+  const totalIncome = initialIncomes.reduce((acc, curr) => acc + curr.amount, 0);
+  const totalExpense = initialExpenses.reduce((acc, curr) => acc + curr.amount, 0);
+  const balance = totalIncome - totalExpense;
+  const handleGenerateAdvice = async () => { setLoadingAdvice(true); setFinancialAdvice(''); const prompt = `Analyze these school finance figures: Income $${totalIncome}, Expense $${totalExpense}, Balance $${balance}. Give a financial health summary in Khmer and 3 actionable tips. Use emojis.`; const response = await generateGeminiResponse(prompt); setFinancialAdvice(response); setLoadingAdvice(false); };
+  return (<div className="space-y-6"><div className="flex justify-between items-center"><h2 className="text-2xl font-bold text-slate-800">ហិរញ្ញវត្ថុ & លំហូរសាច់ប្រាក់</h2></div><div className="flex flex-wrap gap-2 items-center"><div className="flex space-x-2 bg-slate-100 p-1 rounded-lg w-fit"><button onClick={() => setActiveFinanceTab('overview')} className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${activeFinanceTab === 'overview' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600 hover:text-slate-800'}`}>ស្ថានភាពសាច់ប្រាក់ (Charts)</button><button onClick={() => setActiveFinanceTab('income')} className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${activeFinanceTab === 'income' ? 'bg-white text-green-600 shadow-sm' : 'text-slate-600 hover:text-slate-800'}`}>ចំណូល (Income)</button><button onClick={() => setActiveFinanceTab('expense')} className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${activeFinanceTab === 'expense' ? 'bg-white text-red-600 shadow-sm' : 'text-slate-600 hover:text-slate-800'}`}>ចំណាយ (Expenses)</button></div></div>{activeFinanceTab === 'overview' && (<div className="space-y-6 animate-in fade-in duration-300"><div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100"><div className="flex justify-between items-start mb-4"><h3 className="font-bold text-blue-800 flex items-center text-lg"><BrainCircuit className="mr-2" size={24} /> AI វិភាគហិរញ្ញវត្ថុ (Financial Health Check)</h3><button onClick={handleGenerateAdvice} disabled={loadingAdvice} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center shadow-sm disabled:opacity-70">{loadingAdvice ? <Loader2 className="animate-spin mr-2" size={16} /> : <Sparkles size={16} className="mr-2" />} វិភាគទិន្នន័យ</button></div>{financialAdvice && (<div className="bg-white p-4 rounded-lg border border-blue-200 text-slate-700 text-sm whitespace-pre-wrap leading-relaxed shadow-sm animate-in fade-in slide-in-from-top-2">{financialAdvice}</div>)}</div><div className="grid grid-cols-1 md:grid-cols-3 gap-6"><div className="bg-gradient-to-br from-blue-600 to-blue-700 p-6 rounded-xl text-white shadow-lg relative overflow-hidden"><div className="relative z-10"><p className="text-blue-100 text-sm font-medium">សមតុល្យសាច់ប្រាក់ (Net Balance)</p><h3 className="text-3xl font-bold mt-2">${balance.toLocaleString()}</h3></div><div className="absolute right-0 bottom-0 opacity-10 transform translate-x-4 translate-y-4"><DollarSign size={100} /></div></div><div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between"><div><p className="text-slate-500 text-sm">ចំណូលសរុប</p><h3 className="text-2xl font-bold mt-1 text-green-600">+${totalIncome.toLocaleString()}</h3></div><div className="p-3 bg-green-50 rounded-full text-green-600"><TrendingUp size={24} /></div></div><div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between"><div><p className="text-slate-500 text-sm">ចំណាយសរុប</p><h3 className="text-2xl font-bold mt-1 text-red-600">-${totalExpense.toLocaleString()}</h3></div><div className="p-3 bg-red-50 rounded-full text-red-600"><TrendingDown size={24} /></div></div></div></div>)}{activeFinanceTab === 'income' && (<div className="animate-in fade-in duration-300"><div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4"><h3 className="text-lg font-bold text-slate-700">បញ្ជីចំណូល និងវិក្កយបត្រ</h3><button className="flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors shadow-sm"><PlusCircle size={18} className="mr-2" /> បង្កើតវិក្កយបត្រថ្មី</button></div><div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-50 text-slate-600 text-sm uppercase"><th className="p-4 font-semibold border-b">លេខវិក្កយបត្រ</th><th className="p-4 font-semibold border-b">និស្សិត</th><th className="p-4 font-semibold border-b">ប្រភេទចំណូល</th><th className="p-4 font-semibold border-b">កាលបរិច្ឆេទ</th><th className="p-4 font-semibold border-b">វដ្តបង់ប្រាក់</th><th className="p-4 font-semibold border-b text-right">ទឹកប្រាក់</th></tr></thead><tbody className="divide-y divide-slate-100">{initialIncomes.map((inc) => (<tr key={inc.id} className="text-sm hover:bg-slate-50"><td className="p-4 font-medium text-blue-600">{inc.id}</td><td className="p-4 font-medium">{inc.student}</td><td className="p-4"><span className="bg-green-50 text-green-700 px-2 py-1 rounded text-xs border border-green-100">{inc.type}</span></td><td className="p-4 text-slate-500">{inc.date}</td><td className="p-4 text-slate-500 text-xs">{inc.cycle}</td><td className="p-4 font-bold text-right text-slate-800">${inc.amount}</td></tr>))}</tbody></table></div></div>)}{activeFinanceTab === 'expense' && (<div className="animate-in fade-in duration-300"><div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4"><h3 className="text-lg font-bold text-slate-700">បញ្ជីចំណាយប្រតិបត្តិការ</h3><button className="flex items-center bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors shadow-sm"><PlusCircle size={18} className="mr-2" /> ចុះបញ្ជីចំណាយ</button></div><div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-50 text-slate-600 text-sm uppercase"><th className="p-4 font-semibold border-b">លេខសំគាល់</th><th className="p-4 font-semibold border-b">បរិយាយ (Description)</th><th className="p-4 font-semibold border-b">ប្រភេទចំណាយ</th><th className="p-4 font-semibold border-b">កាលបរិច្ឆេទ</th><th className="p-4 font-semibold border-b text-right">ទឹកប្រាក់</th></tr></thead><tbody className="divide-y divide-slate-100">{initialExpenses.map((exp) => (<tr key={exp.id} className="text-sm hover:bg-slate-50"><td className="p-4 text-slate-500">{exp.id}</td><td className="p-4 font-medium text-slate-800">{exp.title}</td><td className="p-4"><span className={`px-2 py-1 rounded text-xs border ${exp.category === 'ទឹក-ភ្លើង' ? 'bg-yellow-50 text-yellow-700 border-yellow-100' : exp.category === 'ជួលអាគារ' ? 'bg-orange-50 text-orange-700 border-orange-100' : 'bg-slate-100 text-slate-600 border-slate-200'}`}>{exp.category}</span></td><td className="p-4 text-slate-500">{exp.date}</td><td className="p-4 font-bold text-right text-red-600">-${exp.amount}</td></tr>))}</tbody></table></div></div>)}</div>);
+};
+
+const AcademicSystemView = () => {
+    const [activeProgram, setActiveProgram] = useState('bachelor');
+    const [quizTopic, setQuizTopic] = useState('');
+    const [quizResult, setQuizResult] = useState('');
+    const [loadingQuiz, setLoadingQuiz] = useState(false);
+    const programs = { associate: { title: 'ថ្នាក់បរិញ្ញាបត្ររង', duration: '២ ឆ្នាំ', semesters: '៤ ឆមាស', subjects: '២០ មុខវិជ្ជា', credits: '៦០ ក្រេឌីត', color: 'bg-blue-50 text-blue-700 border-blue-200', description: 'កម្មវិធីសិក្សារយៈពេលខ្លី បង្កើតមូលដ្ឋានគ្រឹះជំនាញ។' }, bachelor: { title: 'ថ្នាក់បរិញ្ញាបត្រ', duration: '៤ ឆ្នាំ', semesters: '៨ ឆមាស', subjects: '៤០ មុខវិជ្ជា', credits: '១២០ ក្រេឌីត', color: 'bg-green-50 text-green-700 border-green-200', description: 'កម្មវិធីសិក្សាពេញលេញ សម្រាប់ជំនាញឯកទេស។' }, master: { title: 'ថ្នាក់បរិញ្ញាបត្រជាន់ខ្ពស់', duration: '២ ឆ្នាំ', semesters: '៤ ឆមាស', subjects: '២០ មុខវិជ្ជា', credits: '៤៥ ក្រេឌីត', color: 'bg-purple-50 text-purple-700 border-purple-200', description: 'ការសិក្សាស្រាវជ្រាវកម្រិតខ្ពស់ និងភាពជាអ្នកដឹកនាំ។' }, phd: { title: 'ថ្នាក់បណ្ឌិត', duration: '៣ ឆ្នាំ', semesters: '៦ ឆមាស', subjects: '៣០ មុខវិជ្ជា', credits: '៥៤ ក្រេឌីត', color: 'bg-orange-50 text-orange-700 border-orange-200', description: 'ការស្រាវជ្រាវស៊ីជម្រៅ និងការបង្កើតចំណេះដឹងថ្មី។' } };
+    const mockTranscript = [{ subject: 'Introduction to CS', score: 92, grade: 'A+', point: 4.0 }, { subject: 'Advanced Mathematics', score: 78, grade: 'B+', point: 3.5 }, { subject: 'Database Management', score: 85, grade: 'A', point: 4.0 }, { subject: 'Web Development', score: 71, grade: 'B-', point: 2.75 }];
+    const handleGenerateQuiz = async () => { if (!quizTopic) return; setLoadingQuiz(true); setQuizResult(''); const prompt = `Create a 3-question multiple choice quiz in Khmer for the subject: "${quizTopic}". Format per question: Q1. [Question] A. [Option] B. [Option] C. [Option] D. [Option] Correct Answer: [Answer]`; const response = await generateGeminiResponse(prompt); setQuizResult(response); setLoadingQuiz(false); };
+    return (<div className="space-y-6"><h2 className="text-2xl font-bold text-slate-800">ប្រព័ន្ធគ្រប់គ្រងការសិក្សា</h2><div className="bg-gradient-to-r from-teal-50 to-emerald-50 p-6 rounded-xl border border-teal-100 shadow-sm"><div className="flex flex-col md:flex-row gap-4 justify-between items-start md:items-center mb-4"><div className="flex items-center"><div className="p-2 bg-teal-100 rounded-lg text-teal-700 mr-3"><HelpCircle size={24} /></div><div><h3 className="font-bold text-teal-900 text-lg">AI បង្កើតសំណួរតេស្ត (Quiz Generator)</h3><p className="text-teal-600 text-xs">បង្កើតសំណួរតេស្តរហ័សសម្រាប់មុខវិជ្ជាផ្សេងៗ</p></div></div><div className="flex w-full md:w-auto gap-2"><input type="text" placeholder="បញ្ចូលឈ្មោះមុខវិជ្ជា..." className="w-full md:w-64 px-4 py-2 border border-teal-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm" value={quizTopic} onChange={(e) => setQuizTopic(e.target.value)} /><button onClick={handleGenerateQuiz} disabled={loadingQuiz || !quizTopic} className="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center shadow-sm disabled:opacity-70 whitespace-nowrap">{loadingQuiz ? <Loader2 className="animate-spin mr-2" size={16} /> : <Sparkles size={16} className="mr-2" />} បង្កើត</button></div></div>{quizResult && (<div className="bg-white p-5 rounded-xl border border-teal-200 text-slate-700 text-sm whitespace-pre-wrap leading-relaxed shadow-sm animate-in fade-in slide-in-from-top-2"><h4 className="font-bold text-teal-800 mb-3 border-b border-teal-100 pb-2">លទ្ធផលសំណួរតេស្ត៖</h4>{quizResult}</div>)}</div><div className="grid grid-cols-2 md:grid-cols-4 gap-4">{Object.keys(programs).map((key) => (<button key={key} onClick={() => setActiveProgram(key)} className={`p-4 rounded-xl border-2 text-center transition-all ${activeProgram === key ? 'border-blue-600 bg-blue-50 text-blue-700 font-bold shadow-sm' : 'border-slate-200 bg-white text-slate-600 hover:border-blue-300'}`}>{key === 'associate' && 'បរិញ្ញាបត្ររង'}{key === 'bachelor' && 'បរិញ្ញាបត្រ'}{key === 'master' && 'អនុបណ្ឌិត'}{key === 'phd' && 'បណ្ឌិត'}</button>))}</div><div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6"><div className={`p-4 rounded-lg border mb-6 ${programs[activeProgram].color}`}><h3 className="text-xl font-bold mb-2">{programs[activeProgram].title}</h3><p>{programs[activeProgram].description}</p></div><div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-8"><div className="p-4 bg-slate-50 rounded-lg"><p className="text-slate-500 text-sm">រយៈពេលសិក្សា</p><p className="text-2xl font-bold text-slate-800">{programs[activeProgram].duration}</p></div><div className="p-4 bg-slate-50 rounded-lg"><p className="text-slate-500 text-sm">ចំនួនឆមាស</p><p className="text-2xl font-bold text-slate-800">{programs[activeProgram].semesters}</p></div><div className="p-4 bg-slate-50 rounded-lg"><p className="text-slate-500 text-sm">ចំនួនមុខវិជ្ជា</p><p className="text-2xl font-bold text-slate-800">{programs[activeProgram].subjects}</p></div><div className="p-4 bg-slate-50 rounded-lg"><p className="text-slate-500 text-sm">ប្រព័ន្ធពិន្ទុ</p><p className="text-2xl font-bold text-slate-800">GPA 4.0</p></div></div></div></div>);
+};
+
+const PayrollView = () => {
+    const [viewType, setViewType] = useState('staff');
+    const [memo, setMemo] = useState('');
+    const [loadingMemo, setLoadingMemo] = useState(false);
+    const totalStaffPayroll = staffPayroll.reduce((acc, curr) => acc + curr.netSalary, 0);
+    const handleGeneratePayrollMemo = async () => { setLoadingMemo(true); setMemo(''); const prompt = `Write a formal administrative letter (memo) in Khmer to the Finance Department requesting authorization to disburse staff salaries for the current month. Context: Total Amount: $${totalStaffPayroll}, Total Staff: ${staffPayroll.length}. Format: Formal Khmer administrative style.`; const response = await generateGeminiResponse(prompt); setMemo(response); setLoadingMemo(false); };
+    return (<div className="space-y-6"><h2 className="text-2xl font-bold text-slate-800">បញ្ជីប្រាក់បៀវត្ស</h2><div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100 shadow-sm"><div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4"><h3 className="font-bold text-green-900 flex items-center text-lg"><FileSignature className="mr-2" size={24} /> AI សរសេរលិខិតបើកប្រាក់ (Payroll Authorization Memo)</h3><button onClick={handleGeneratePayrollMemo} disabled={loadingMemo} className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center shadow-sm disabled:opacity-70 whitespace-nowrap">{loadingMemo ? <Loader2 className="animate-spin mr-2" size={16} /> : <Sparkles size={16} className="mr-2" />} បង្កើតលិខិតស្នើសុំ</button></div>{memo && (<div className="bg-white p-6 rounded-xl border border-green-200 text-slate-800 text-sm whitespace-pre-wrap leading-relaxed shadow-sm font-serif animate-in fade-in slide-in-from-top-2"><div className="flex justify-end mb-2"><button onClick={() => setMemo('')} className="text-slate-400 hover:text-slate-600"><X size={16} /></button></div>{memo}</div>)}</div><div className="flex space-x-4 border-b border-slate-200"><button onClick={() => setViewType('staff')} className={`pb-3 px-4 font-medium transition-colors border-b-2 ${viewType === 'staff' ? 'border-blue-600 text-blue-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}>ប្រាក់ខែបុគ្គលិក (Staff Salary)</button><button onClick={() => setViewType('teacher')} className={`pb-3 px-4 font-medium transition-colors border-b-2 ${viewType === 'teacher' ? 'border-blue-600 text-blue-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}>ប្រាក់ម៉ោងគ្រូបង្រៀន (Hourly Pay)</button></div>{viewType === 'staff' ? (<div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"><div className="p-4 bg-slate-50 flex justify-between items-center"><h3 className="font-bold text-slate-700">តារាងប្រាក់ខែបុគ្គលិក (សរុប: ${totalStaffPayroll})</h3><button className="text-sm bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700">បង្កើតការបើកប្រាក់</button></div><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-50 text-slate-600 text-sm uppercase"><th className="p-4 font-semibold border-b">ឈ្មោះបុគ្គលិក</th><th className="p-4 font-semibold border-b">ប្រាក់គោល</th><th className="p-4 font-semibold border-b text-green-600">ប្រាក់បន្ថែម</th><th className="p-4 font-semibold border-b text-red-600">កាត់ប្រាក់</th><th className="p-4 font-semibold border-b">ប្រាក់សរុប</th><th className="p-4 font-semibold border-b">ស្ថានភាព</th></tr></thead><tbody className="divide-y divide-slate-100">{staffPayroll.map((item) => (<tr key={item.id} className="text-sm hover:bg-slate-50"><td className="p-4 font-medium">{item.staffName}</td><td className="p-4">${item.baseSalary}</td><td className="p-4 text-green-600">+${item.bonus}</td><td className="p-4 text-red-600">-${item.deduction}</td><td className="p-4 font-bold text-blue-700">${item.netSalary}</td><td className="p-4"><span className={`px-2 py-1 rounded-full text-xs font-medium ${item.status === 'បានបើក' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}>{item.status}</span></td></tr>))}</tbody></table></div>) : (<div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"><div className="p-4 bg-slate-50 flex justify-between items-center"><h3 className="font-bold text-slate-700">តារាងប្រាក់ម៉ោងគ្រូបង្រៀន</h3><button className="text-sm bg-blue-600 text-white px-3 py-1.5 rounded hover:bg-blue-700">កត់ត្រាម៉ោងថ្មី</button></div><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-50 text-slate-600 text-sm uppercase"><th className="p-4 font-semibold border-b">ឈ្មោះគ្រូបង្រៀន</th><th className="p-4 font-semibold border-b">ខែ</th><th className="p-4 font-semibold border-b">ចំនួនម៉ោងបង្រៀន</th><th className="p-4 font-semibold border-b">តម្លៃ/ម៉ោង</th><th className="p-4 font-semibold border-b">ប្រាក់សរុប</th></tr></thead><tbody className="divide-y divide-slate-100">{teacherHourlyPay.map((item) => (<tr key={item.id} className="text-sm hover:bg-slate-50"><td className="p-4 font-medium flex items-center"><Clock size={16} className="mr-2 text-slate-400" />{item.teacherName}</td><td className="p-4">{item.month}</td><td className="p-4">{item.hoursWorked} ម៉ោង</td><td className="p-4">${item.rate}</td><td className="p-4 font-bold text-blue-700">${item.total}</td></tr>))}</tbody></table></div>)}</div>);
+};
+
+const StudentsView = () => {
+  const [students, setStudents] = useState(initialStudents);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedStudent, setSelectedStudent] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [careerAdvice, setCareerAdvice] = useState({});
+  const [loadingCareer, setLoadingCareer] = useState(null);
+  const filteredStudents = students.filter(student => student.nameKh.toLowerCase().includes(searchTerm.toLowerCase()) || student.id.toLowerCase().includes(searchTerm.toLowerCase()) || student.nameEn.toLowerCase().includes(searchTerm.toLowerCase()));
+  const handleGenerateCareerAdvice = async (student) => { if (careerAdvice[student.id]) { const newAdvice = {...careerAdvice}; delete newAdvice[student.id]; setCareerAdvice(newAdvice); return; } setLoadingCareer(student.id); const prompt = `Suggest 3 potential career paths and 1 key soft skill to improve for a university student majoring in "${student.major}" (${student.degreeLevel}). Language: Khmer. Use emojis.`; const response = await generateGeminiResponse(prompt); setCareerAdvice(prev => ({...prev, [student.id]: response})); setLoadingCareer(null); };
+  return (<div className="space-y-6"><div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4"><h2 className="text-2xl font-bold text-slate-800">បញ្ជី និងប្រវត្តិរូបនិស្សិត</h2><button className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"><UserPlus size={18} className="mr-2" /> ចុះឈ្មោះនិស្សិតថ្មី</button></div><div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"><div className="p-4 border-b border-slate-200 bg-slate-50 flex items-center"><div className="relative w-full max-w-md"><Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={18} /><input type="text" placeholder="ស្វែងរកតាមឈ្មោះ ឬអត្តលេខ..." className="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} /></div></div><div className="overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-50 text-slate-600 text-sm uppercase"><th className="p-4 font-semibold border-b border-slate-200">អត្តលេខ</th><th className="p-4 font-semibold border-b border-slate-200">គោត្តនាម-នាម (ខ្មែរ)</th><th className="p-4 font-semibold border-b border-slate-200">ឈ្មោះឡាតាំង</th><th className="p-4 font-semibold border-b border-slate-200">ភេទ</th><th className="p-4 font-semibold border-b border-slate-200">កម្រិត/ឆ្នាំ</th><th className="p-4 font-semibold border-b border-slate-200">ជំនាញ</th><th className="p-4 font-semibold border-b border-slate-200">ស្ថានភាព</th><th className="p-4 font-semibold border-b border-slate-200 text-right">សកម្មភាព</th></tr></thead><tbody className="divide-y divide-slate-100">{filteredStudents.length > 0 ? (filteredStudents.map((student) => (<React.Fragment key={student.id}><tr className="hover:bg-slate-50 transition-colors text-sm text-slate-700"><td className="p-4 font-medium text-blue-600">{student.id}</td><td className="p-4 font-bold text-slate-800">{student.nameKh}</td><td className="p-4 text-slate-500 uppercase">{student.nameEn}</td><td className="p-4">{student.gender}</td><td className="p-4 text-xs"><div>{student.degreeLevel}</div><div className="text-slate-500">{student.yearLevel}</div></td><td className="p-4">{student.major}</td><td className="p-4"><span className={`px-2 py-1 rounded-full text-xs font-medium ${student.status === 'សកម្ម' ? 'bg-green-100 text-green-700' : student.status === 'ព្យួរ' ? 'bg-yellow-100 text-yellow-700' : 'bg-slate-100 text-slate-700'}`}>{student.status}</span></td><td className="p-4 text-right flex justify-end space-x-2"><button onClick={() => setSelectedStudent(student)} className="flex items-center px-3 py-1 bg-blue-50 text-blue-600 rounded hover:bg-blue-100 transition-colors text-xs font-medium border border-blue-200"><Eye size={14} className="mr-1" /> ពិនិត្យ</button><button onClick={() => handleGenerateCareerAdvice(student)} className={`flex items-center px-3 py-1 rounded transition-colors text-xs font-medium border ${careerAdvice[student.id] ? 'bg-teal-100 text-teal-700 border-teal-200' : 'bg-white text-teal-600 border-teal-200 hover:bg-teal-50'}`} title="AI Career Advice">{loadingCareer === student.id ? <Loader2 size={14} className="animate-spin" /> : <Compass size={14} />}</button></td></tr>{careerAdvice[student.id] && (<tr><td colSpan="8" className="p-4 bg-teal-50 border-b border-teal-100"><div className="space-y-2 relative"><div className="flex items-center justify-between"><h4 className="font-bold text-teal-800 flex items-center text-xs uppercase tracking-wide"><Brain size={14} className="mr-2" /> ការណែនាំអំពីអាជីពសម្រាប់ជំនាញ {student.major}</h4><button onClick={() => handleGenerateCareerAdvice(student)} className="text-slate-400 hover:text-slate-600"><X size={16} /></button></div><div className="bg-white p-3 rounded border border-teal-200 text-slate-700 whitespace-pre-wrap text-sm leading-relaxed shadow-sm">{careerAdvice[student.id]}</div></div></td></tr>)}</React.Fragment>))) : (<tr><td colSpan="8" className="p-8 text-center text-slate-500">មិនមានទិន្នន័យ</td></tr>)}</tbody></table></div></div>{selectedStudent && (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4"><div className="bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto relative"><div className="sticky top-0 bg-white border-b border-slate-200 p-4 flex justify-between items-center z-10"><h3 className="text-xl font-bold text-slate-800 flex items-center"><User size={24} className="mr-2 text-blue-600" /> ប្រវត្តិរូបសង្ខេបនិស្សិត (Student Profile)</h3><button onClick={() => setSelectedStudent(null)} className="p-2 bg-slate-100 rounded-full hover:bg-slate-200 text-slate-600"><X size={20} /></button></div><div className="p-6 space-y-8"><div className="flex flex-col md:flex-row gap-6 items-start"><div className="w-32 h-32 bg-slate-200 rounded-lg flex items-center justify-center text-slate-400 self-center md:self-start"><Users size={48} /></div><div className="flex-1 space-y-2"><div className="flex flex-wrap gap-2 mb-2"><span className={`px-2 py-1 rounded text-xs font-bold uppercase ${selectedStudent.status === 'សកម្ម' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}`}>{selectedStudent.status}</span><span className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-bold uppercase">ID: {selectedStudent.id}</span></div><h2 className="text-2xl font-bold text-slate-900">{selectedStudent.nameKh}</h2><h3 className="text-lg font-medium text-slate-500 uppercase">{selectedStudent.nameEn}</h3><div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 text-sm text-slate-700"><div className="flex items-center"><Phone size={16} className="mr-2 text-slate-400"/> {selectedStudent.phone}</div><div className="flex items-center"><CreditCard size={16} className="mr-2 text-slate-400"/> NID: {selectedStudent.nid}</div><div className="flex items-center"><Briefcase size={16} className="mr-2 text-slate-400"/> មុខរបរ: {selectedStudent.job}</div><div className="flex items-center"><MapPin size={16} className="mr-2 text-slate-400"/> {selectedStudent.pob}</div></div></div></div><div className="border-t border-slate-100 my-4"></div><div className="grid grid-cols-1 lg:grid-cols-2 gap-8"><div className="bg-slate-50 p-5 rounded-xl border border-slate-200"><h4 className="font-bold text-blue-800 mb-4 flex items-center"><GraduationCap size={18} className="mr-2" /> ព័ត៌មានសិក្សា (Academic Info)</h4><div className="grid grid-cols-2 gap-4 text-sm"><div><p className="text-slate-500 text-xs">កម្រិតសិក្សា</p><p className="font-medium">{selectedStudent.degreeLevel}</p></div><div><p className="text-slate-500 text-xs">ជំនាញ (Major)</p><p className="font-medium text-blue-700">{selectedStudent.major}</p></div><div><p className="text-slate-500 text-xs">ឆ្នាំទី</p><p className="font-medium">{selectedStudent.yearLevel}</p></div><div><p className="text-slate-500 text-xs">ឆមាសទី</p><p className="font-medium">{selectedStudent.semester}</p></div><div><p className="text-slate-500 text-xs">ជំនាន់ទី</p><p className="font-medium">{selectedStudent.batch}</p></div><div><p className="text-slate-500 text-xs">វគ្គសិក្សា</p><p className="font-medium">{selectedStudent.session}</p></div></div></div><div className="bg-slate-50 p-5 rounded-xl border border-slate-200"><h4 className="font-bold text-blue-800 mb-4 flex items-center"><UserCog size={18} className="mr-2" /> ព័ត៌មានលម្អិត (Personal Details)</h4><div className="grid grid-cols-2 gap-4 text-sm"><div><p className="text-slate-500 text-xs">ភេទ</p><p className="font-medium">{selectedStudent.gender}</p></div><div><p className="text-slate-500 text-xs">ថ្ងៃខែឆ្នាំកំណើត</p><p className="font-medium">{selectedStudent.dob}</p></div><div><p className="text-slate-500 text-xs">អាយុ (ស្វ័យប្រវត្តិ)</p><p className="font-medium text-green-600">{calculateAge(selectedStudent.dob)} ឆ្នាំ</p></div><div><p className="text-slate-500 text-xs">ទីកន្លែងកំណើត</p><p className="font-medium line-clamp-1" title={selectedStudent.pob}>{selectedStudent.pob}</p></div></div></div></div><div className="grid grid-cols-1 lg:grid-cols-2 gap-8"><div className="border border-slate-200 rounded-xl p-5"><h4 className="font-bold text-slate-700 mb-4 border-b pb-2">ប្រវត្តិសិក្សា (Educational Background)</h4><div className="mb-4"><h5 className="text-sm font-bold text-slate-600 mb-2">• កម្រិតវប្បធម៌ទុតិយភូមិ (High School)</h5><div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm pl-2 border-l-2 border-blue-200"><div className="text-slate-500">ឈ្មោះសាលា:</div><div>{selectedStudent.highSchool}</div><div className="text-slate-500">មណ្ឌលប្រឡង:</div><div>{selectedStudent.examCenter}</div><div className="text-slate-500">ឆ្នាំប្រឡង:</div><div>{selectedStudent.examYear}</div><div className="text-slate-500">លេខ ស.ប:</div><div>{selectedStudent.certNo}</div><div className="text-slate-500">លទ្ធផល:</div><div className={`font-bold ${selectedStudent.examResult === 'ជាប់' ? 'text-green-600' : 'text-red-600'}`}>{selectedStudent.examResult}</div></div></div><div><h5 className="text-sm font-bold text-slate-600 mb-2">• កម្រិតមហាវិទ្យាល័យ (Previous Degree)</h5><div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm pl-2 border-l-2 border-purple-200"><div className="text-slate-500">កម្រិត១:</div><div>{selectedStudent.prevDegreeLevel1}</div><div className="text-slate-500">កម្រិត២:</div><div>{selectedStudent.prevDegreeLevel2}</div><div className="text-slate-500">មកពីសាលា:</div><div>{selectedStudent.prevSchool}</div><div className="text-slate-500">លេខយោង:</div><div>{selectedStudent.prevRef}</div></div></div></div><div className="border border-slate-200 rounded-xl p-5 bg-orange-50/30"><h4 className="font-bold text-slate-700 mb-4 border-b pb-2">គ្រួសារ និង អាសយដ្ឋាន</h4><div className="mb-4"><div className="grid grid-cols-1 sm:grid-cols-2 gap-4"><div className="bg-white p-3 rounded border border-orange-100"><h5 className="text-xs font-bold text-orange-800 uppercase mb-2">ព័ត៌មានឪពុក</h5><div className="text-sm space-y-1"><p><span className="text-slate-500">ឈ្មោះ:</span> {selectedStudent.fatherName}</p><p><span className="text-slate-500">កើតឆ្នាំ:</span> {selectedStudent.fatherDob}</p><p><span className="text-slate-500">មុខរបរ:</span> {selectedStudent.fatherJob}</p><p><span className="text-slate-500">ស្ថានភាព:</span> {selectedStudent.fatherStatus}</p></div></div><div className="bg-white p-3 rounded border border-orange-100"><h5 className="text-xs font-bold text-orange-800 uppercase mb-2">ព័ត៌មានម្តាយ</h5><div className="text-sm space-y-1"><p><span className="text-slate-500">ឈ្មោះ:</span> {selectedStudent.motherName}</p><p><span className="text-slate-500">កើតឆ្នាំ:</span> {selectedStudent.motherDob}</p><p><span className="text-slate-500">មុខរបរ:</span> {selectedStudent.motherJob}</p><p><span className="text-slate-500">ស្ថានភាព:</span> {selectedStudent.motherStatus}</p></div></div></div></div><div><h5 className="text-sm font-bold text-slate-600 mb-2 flex items-center"><MapPin size={16} className="mr-1 text-red-500" /> អាសយដ្ឋានបច្ចុប្បន្ន</h5><p className="text-sm text-slate-700 bg-white p-3 rounded border border-slate-200">{selectedStudent.currentAddress}</p></div></div></div></div><div className="sticky bottom-0 bg-slate-50 border-t border-slate-200 p-4 flex justify-end gap-3 rounded-b-xl z-10"><button onClick={() => setSelectedStudent(null)} className="px-4 py-2 border border-slate-300 rounded-lg text-slate-600 hover:bg-white transition-colors">បិទ</button><button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center"><Edit size={16} className="mr-2" /> កែប្រែព័ត៌មាន</button></div></div></div>)}</div>);
+};
+
+const ManagementView = () => {
+    const [meetingTopic, setMeetingTopic] = useState('');
+    const [agenda, setAgenda] = useState('');
+    const [loadingAgenda, setLoadingAgenda] = useState(false);
+    const handleGenerateAgenda = async () => { if (!meetingTopic) return; setLoadingAgenda(true); setAgenda(''); const prompt = `Create a structured meeting agenda in Khmer for the topic: "${meetingTopic}". Include: Objective, 3-4 Agenda Items, Closing. Use emojis.`; const response = await generateGeminiResponse(prompt); setAgenda(response); setLoadingAgenda(false); };
+    return (<div className="space-y-6"><div className="flex justify-between items-center"><h2 className="text-2xl font-bold text-slate-800">គណៈគ្រប់គ្រង</h2><button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">បន្ថែមសមាជិក</button></div><div className="bg-gradient-to-r from-cyan-50 to-sky-50 p-6 rounded-xl border border-cyan-100 shadow-sm"><h3 className="font-bold text-cyan-900 mb-4 flex items-center text-lg"><ClipboardList className="mr-2" size={24} /> AI បង្កើតរបៀបវារៈប្រជុំ (Meeting Agenda Generator)</h3><div className="flex flex-col md:flex-row gap-3"><input type="text" placeholder="បញ្ចូលប្រធានបទប្រជុំ..." className="w-full md:w-2/3 px-4 py-2 border border-cyan-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" value={meetingTopic} onChange={(e) => setMeetingTopic(e.target.value)} /><button onClick={handleGenerateAgenda} disabled={loadingAgenda || !meetingTopic} className="px-6 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors disabled:opacity-70 flex items-center justify-center font-medium">{loadingAgenda ? <Loader2 className="animate-spin mr-2" size={18} /> : <Sparkles className="mr-2" size={18} />} រៀបចំរបៀបវារៈ</button></div>{agenda && (<div className="mt-4 bg-white p-5 rounded-xl border border-cyan-200 text-slate-700 text-sm whitespace-pre-wrap leading-relaxed shadow-sm animate-in fade-in slide-in-from-top-2"><div className="flex justify-between items-start mb-2 pb-2 border-b border-cyan-50"><h4 className="font-bold text-cyan-800">របៀបវារៈសម្រាប់: {meetingTopic}</h4><button onClick={() => setAgenda('')} className="text-slate-400 hover:text-slate-600"><X size={16} /></button></div>{agenda}</div>)}</div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{initialManagement.map((member) => (<div key={member.id} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 relative overflow-hidden group"><div className="absolute top-0 left-0 w-2 h-full bg-orange-500"></div><div className="flex items-start"><div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center text-orange-500 mb-4 mr-4"><UserCog size={32} /></div><div><h3 className="text-lg font-bold text-slate-800">{member.name}</h3><p className="text-orange-600 text-sm font-medium mb-1">{member.position}</p><p className="text-slate-500 text-xs">{member.email}</p></div></div></div>))}</div></div>);
+};
+
+const StaffView = () => {
+    const [jdPosition, setJdPosition] = useState('');
+    const [generatedJD, setGeneratedJD] = useState('');
+    const [loadingJD, setLoadingJD] = useState(false);
+    const handleGenerateJD = async () => { if (!jdPosition) return; setLoadingJD(true); setGeneratedJD(''); const prompt = `Write a professional Job Description (JD) in Khmer for the position of "${jdPosition}" at a university. Include: Responsibilities, Requirements, Benefits. Use emojis.`; const response = await generateGeminiResponse(prompt); setGeneratedJD(response); setLoadingJD(false); };
+    return (<div className="space-y-6"><div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4"><h2 className="text-2xl font-bold text-slate-800">បុគ្គលិក</h2><button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">បន្ថែមបុគ្គលិក</button></div><div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-xl border border-indigo-100 shadow-sm"><h3 className="font-bold text-indigo-900 mb-4 flex items-center"><FilePlus className="mr-2" size={20} /> AI បង្កើតការប្រកាសការងារ (Job Description Generator)</h3><div className="flex flex-col md:flex-row gap-3"><input type="text" placeholder="បញ្ចូលតួនាទី..." className="w-full md:w-1/2 px-4 py-2 border border-indigo-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" value={jdPosition} onChange={(e) => setJdPosition(e.target.value)} /><button onClick={handleGenerateJD} disabled={loadingJD || !jdPosition} className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors disabled:opacity-70 flex items-center justify-center min-w-[140px]">{loadingJD ? <Loader2 className="animate-spin mr-2" size={18} /> : <Sparkles className="mr-2" size={18} />} បង្កើត JD</button></div>{generatedJD && (<div className="mt-4 bg-white p-5 rounded-xl border border-indigo-200 text-slate-700 text-sm whitespace-pre-wrap leading-relaxed shadow-sm animate-in fade-in slide-in-from-top-2"><div className="flex justify-between items-start mb-2 pb-2 border-b border-indigo-50"><h4 className="font-bold text-indigo-800">លទ្ធផលសម្រាប់: {jdPosition}</h4><button onClick={() => setGeneratedJD('')} className="text-slate-400 hover:text-slate-600"><X size={16} /></button></div>{generatedJD}</div>)}</div><div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"><table className="w-full text-left border-collapse"><thead><tr className="bg-slate-50 text-slate-600 text-sm uppercase"><th className="p-4 font-semibold border-b border-slate-200">អត្តលេខ</th><th className="p-4 font-semibold border-b border-slate-200">ឈ្មោះ</th><th className="p-4 font-semibold border-b border-slate-200">តួនាទី</th><th className="p-4 font-semibold border-b border-slate-200">ផ្នែក</th><th className="p-4 font-semibold border-b border-slate-200">ប្រាក់ខែគោល</th><th className="p-4 font-semibold border-b border-slate-200 text-right">សកម្មភាព</th></tr></thead><tbody className="divide-y divide-slate-100">{initialStaff.map((staff) => (<tr key={staff.id} className="hover:bg-slate-50 transition-colors text-sm text-slate-700"><td className="p-4 font-medium text-slate-900">{staff.id}</td><td className="p-4 flex items-center"><div className="w-8 h-8 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center mr-3 text-xs font-bold">{staff.name.charAt(0)}</div>{staff.name}</td><td className="p-4 font-medium">{staff.position}</td><td className="p-4"><span className="px-2 py-1 bg-slate-100 rounded text-xs text-slate-600">{staff.department}</span></td><td className="p-4 text-green-700 font-bold">${staff.salary}</td><td className="p-4 text-right"><button className="text-blue-600 hover:text-blue-800 font-medium text-sm">កែប្រែ</button></td></tr>))}</tbody></table></div></div>);
+};
+
+const TeachersView = () => {
+    const [reviewingTeacher, setReviewingTeacher] = useState(null);
+    const [generatedReview, setGeneratedReview] = useState('');
+    const [loadingReview, setLoadingReview] = useState(false);
+    const handleGenerateReview = async (teacher) => { if (reviewingTeacher === teacher.id && generatedReview) { setReviewingTeacher(null); return; } setReviewingTeacher(teacher.id); setLoadingReview(true); setGeneratedReview(''); const prompt = `Write a professional performance review in Khmer for ${teacher.name}. Subject: ${teacher.subject}. Context: Be constructive. Keep it concise (3-4 bullet points). Use emojis.`; const response = await generateGeminiResponse(prompt); setGeneratedReview(response); setLoadingReview(false); };
+    return (<div className="space-y-6"><div className="flex justify-between items-center"><h2 className="text-2xl font-bold text-slate-800">គ្រូបង្រៀន</h2><button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">បន្ថែមគ្រូ</button></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{initialTeachers.map((teacher) => (<div key={teacher.id} className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 flex flex-col items-center text-center relative"><div className="w-20 h-20 bg-slate-200 rounded-full flex items-center justify-center text-2xl mb-4 text-slate-400"><Users /></div><h3 className="text-lg font-bold text-slate-800">{teacher.name}</h3><p className="text-blue-600 text-sm font-medium mb-1">{teacher.subject}</p><p className="text-slate-500 text-xs mb-2">{teacher.phone}</p><div className="bg-blue-50 px-3 py-1 rounded-full text-blue-700 text-xs font-bold mb-4">${teacher.ratePerHour} / ម៉ោង</div><div className="flex space-x-2 w-full"><button className="flex-1 py-2 border border-slate-200 rounded-lg text-slate-600 hover:bg-slate-50 text-sm font-medium">ប្រវត្តិរូប</button><button onClick={() => handleGenerateReview(teacher)} className={`flex-1 py-2 rounded-lg text-sm font-medium flex items-center justify-center transition-colors ${reviewingTeacher === teacher.id ? 'bg-purple-100 text-purple-700 border border-purple-200' : 'bg-purple-600 text-white hover:bg-purple-700'}`}>{reviewingTeacher === teacher.id && loadingReview ? <Loader2 size={16} className="animate-spin" /> : <MessageSquare size={16} className="mr-1" />} AI វាយតម្លៃ</button></div>{reviewingTeacher === teacher.id && !loadingReview && generatedReview && (<div className="absolute top-full left-0 right-0 z-10 mt-2 p-4 bg-white border border-purple-200 rounded-xl shadow-xl text-left text-sm text-slate-700 animate-in fade-in slide-in-from-top-2"><div className="flex justify-between items-center mb-2"><h4 className="font-bold text-purple-700 flex items-center"><Sparkles size={14} className="mr-1"/> ការវាយតម្លៃដោយ AI</h4><button onClick={() => setReviewingTeacher(null)}><X size={14} className="text-slate-400 hover:text-slate-600"/></button></div><div className="whitespace-pre-wrap leading-relaxed text-xs">{generatedReview}</div></div>)}</div>))}</div></div>)
+};
+
+const CoursesView = () => {
+    const [topic, setTopic] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [syllabus, setSyllabus] = useState('');
+    const [lessonTopic, setLessonTopic] = useState('');
+    const [lessonDuration, setLessonDuration] = useState('60');
+    const [lessonPlan, setLessonPlan] = useState('');
+    const [loadingLesson, setLoadingLesson] = useState(false);
+    const handleGenerateSyllabus = async () => { if (!topic) return; setLoading(true); setSyllabus(''); const prompt = `Generate a 4-week structured course syllabus for "${topic}" in Khmer. Use bullet points and emojis.`; const result = await generateGeminiResponse(prompt); setSyllabus(result); setLoading(false); };
+    const handleGenerateLessonPlan = async () => { if (!lessonTopic) return; setLoadingLesson(true); setLessonPlan(''); const prompt = `Create a detailed lesson plan in Khmer for "${lessonTopic}". Duration: ${lessonDuration} minutes. Structure: Objective, Introduction, Main Activity, Assessment, Materials. Use emojis.`; const result = await generateGeminiResponse(prompt); setLessonPlan(result); setLoadingLesson(false); };
+    return (<div className="space-y-6"><h2 className="text-2xl font-bold text-slate-800 flex items-center"><Sparkles className="text-yellow-500 mr-2" /> ជំនួយការវគ្គសិក្សាឆ្លាតវៃ (AI Assistant)</h2><div className="grid grid-cols-1 lg:grid-cols-2 gap-6"><div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 h-fit"><h3 className="font-bold text-slate-700 mb-4 flex items-center"><FileText className="mr-2 text-blue-500" /> បង្កើតកម្មវិធីសិក្សា (Syllabus)</h3><div className="space-y-4 mb-4"><div><label className="block text-sm font-medium text-slate-600 mb-1">ឈ្មោះវគ្គសិក្សា</label><input type="text" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="ឧទាហរណ៍: មូលដ្ឋានគ្រឹះ React..." value={topic} onChange={(e) => setTopic(e.target.value)} /></div><button onClick={handleGenerateSyllabus} disabled={loading || !topic} className={`w-full flex items-center justify-center py-2.5 rounded-lg text-white font-medium transition-all ${loading || !topic ? 'bg-slate-300 cursor-not-allowed' : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-md'}`}>{loading ? <Loader2 className="animate-spin mr-2" size={18} /> : <Sparkles className="mr-2" size={18} />} បង្កើតកម្មវិធីសិក្សា</button></div><div className="bg-slate-50 p-4 rounded-lg border border-slate-200 min-h-[200px]">{loading ? (<div className="flex flex-col items-center justify-center h-48 text-slate-400"><Loader2 size={32} className="animate-spin text-blue-500 mb-2" /><p className="text-xs">កំពុងរៀបចំ...</p></div>) : syllabus ? (<div className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed">{syllabus}</div>) : (<div className="flex flex-col items-center justify-center h-48 text-slate-400"><FileText size={32} className="mb-2 opacity-50" /><p className="text-xs">លទ្ធផលនឹងបង្ហាញនៅទីនេះ</p></div>)}</div></div><div className="bg-white p-6 rounded-xl shadow-sm border border-slate-200 h-fit"><h3 className="font-bold text-slate-700 mb-4 flex items-center"><BookOpenCheck className="mr-2 text-green-600" /> បង្កើតកិច្ចតែងការបង្រៀន (Lesson Plan)</h3><div className="space-y-4 mb-4"><div className="flex gap-3"><div className="flex-1"><label className="block text-sm font-medium text-slate-600 mb-1">ប្រធានបទមេរៀន</label><input type="text" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none" placeholder="ឧទាហរណ៍: ការប្រើប្រាស់ State..." value={lessonTopic} onChange={(e) => setLessonTopic(e.target.value)} /></div><div className="w-24"><label className="block text-sm font-medium text-slate-600 mb-1">នាទី</label><input type="number" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none" value={lessonDuration} onChange={(e) => setLessonDuration(e.target.value)} /></div></div><button onClick={handleGenerateLessonPlan} disabled={loadingLesson || !lessonTopic} className={`w-full flex items-center justify-center py-2.5 rounded-lg text-white font-medium transition-all ${loadingLesson || !lessonTopic ? 'bg-slate-300 cursor-not-allowed' : 'bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 shadow-md'}`}>{loadingLesson ? <Loader2 className="animate-spin mr-2" size={18} /> : <Sparkles className="mr-2" size={18} />} បង្កើតកិច្ចតែងការ</button></div><div className="bg-slate-50 p-4 rounded-lg border border-slate-200 min-h-[200px]">{loadingLesson ? (<div className="flex flex-col items-center justify-center h-48 text-slate-400"><Loader2 size={32} className="animate-spin text-green-500 mb-2" /><p className="text-xs">កំពុងរៀបចំ...</p></div>) : lessonPlan ? (<div className="prose prose-sm max-w-none text-slate-700 whitespace-pre-wrap leading-relaxed">{lessonPlan}</div>) : (<div className="flex flex-col items-center justify-center h-48 text-slate-400"><BookOpenCheck size={32} className="mb-2 opacity-50" /><p className="text-xs">លទ្ធផលនឹងបង្ហាញនៅទីនេះ</p></div>)}</div></div></div></div>);
+};
+
+const LibraryDocsView = () => {
+  const [filter, setFilter] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [insightItem, setInsightItem] = useState(null);
+  const [insightContent, setInsightContent] = useState('');
+  const [isGeneratingInsight, setIsGeneratingInsight] = useState(false);
+  const categories = [{ id: 'All', label: 'ទាំងអស់' }, { id: 'សៀវភៅមេរៀន', label: 'សៀវភៅសិក្សា' }, { id: 'លិខិតរដ្ឋបាល', label: 'លិខិតរដ្ឋបាល' }, { id: 'ផ្សេងៗ', label: 'ឯកសារផ្សេងៗ' }];
+  const filteredItems = initialLibraryItems.filter(item => { const matchesFilter = filter === 'All' || item.type === filter; const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()); return matchesFilter && matchesSearch; });
+  const handleGetInsight = async (item) => { if (insightItem === item.id) { setInsightItem(null); return; } setInsightItem(item.id); setIsGeneratingInsight(true); setInsightContent(''); const prompt = `Provide a brief summary and 3 key study topics in Khmer for "${item.title}". Category: ${item.category}.`; const response = await generateGeminiResponse(prompt); setInsightContent(response); setIsGeneratingInsight(false); };
+  return (<div className="space-y-6"><div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4"><h2 className="text-2xl font-bold text-slate-800">បណ្ណាល័យ & ឃ្លាំងឯកសារ</h2><button className="flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors shadow-sm"><PlusCircle size={18} className="mr-2" /> បញ្ចូលឯកសារថ្មី</button></div><div className="grid grid-cols-1 md:grid-cols-3 gap-6"><div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center"><div className="p-3 rounded-full bg-indigo-100 text-indigo-600 mr-4"><Library size={24} /></div><div><p className="text-slate-500 text-sm">សៀវភៅសរុប</p><h3 className="text-xl font-bold text-slate-800">1,250 ក្បាល</h3></div></div><div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center"><div className="p-3 rounded-full bg-orange-100 text-orange-600 mr-4"><Folder size={24} /></div><div><p className="text-slate-500 text-sm">លិខិតរដ្ឋបាល</p><h3 className="text-xl font-bold text-slate-800">340 ឯកសារ</h3></div></div><div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-center"><div className="p-3 rounded-full bg-green-100 text-green-600 mr-4"><Archive size={24} /></div><div><p className="text-slate-500 text-sm">ឯកសារបម្រុងទុក</p><h3 className="text-xl font-bold text-slate-800">85 GB</h3></div></div></div><div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden"><div className="p-4 border-b border-slate-200 flex flex-col md:flex-row gap-4 justify-between items-center bg-slate-50"><div className="flex space-x-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">{categories.map((cat) => (<button key={cat.id} onClick={() => setFilter(cat.id)} className={`px-3 py-1.5 rounded-md text-sm font-medium whitespace-nowrap transition-colors ${filter === cat.id ? 'bg-white text-blue-700 shadow-sm border border-slate-200' : 'text-slate-600 hover:bg-slate-200'}`}>{cat.label}</button>))}</div><div className="relative w-full md:w-64"><Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={16} /><input type="text" placeholder="ស្វែងរកឯកសារ..." className="w-full pl-9 pr-4 py-1.5 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} /></div></div><div className="divide-y divide-slate-100">{filteredItems.length > 0 ? (filteredItems.map((item) => (<React.Fragment key={item.id}><div className={`p-4 hover:bg-slate-50 transition-colors flex flex-col md:flex-row items-start md:items-center justify-between gap-4 ${insightItem === item.id ? 'bg-indigo-50 hover:bg-indigo-50' : ''}`}><div className="flex items-start gap-4"><div className={`p-3 rounded-lg flex-shrink-0 ${item.type === 'សៀវភៅមេរៀន' ? 'bg-blue-100 text-blue-600' : item.type === 'លិខិតរដ្ឋបាល' ? 'bg-orange-100 text-orange-600' : 'bg-slate-100 text-slate-600'}`}>{item.type === 'សៀវភៅមេរៀន' ? <BookOpen size={20} /> : <FileText size={20} />}</div><div><h4 className="font-bold text-slate-800 text-sm md:text-base">{item.title}</h4><div className="flex flex-wrap gap-2 mt-1 text-xs text-slate-500"><span className="flex items-center"><span className="w-1.5 h-1.5 rounded-full bg-slate-400 mr-1.5"></span>{item.id}</span><span className="flex items-center"><span className="w-1.5 h-1.5 rounded-full bg-slate-400 mr-1.5"></span>{item.category}</span><span className="flex items-center"><span className="w-1.5 h-1.5 rounded-full bg-slate-400 mr-1.5"></span>{item.location}</span></div></div></div><div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end"><span className={`px-2.5 py-1 rounded-full text-xs font-medium ${item.status === 'មាន' || item.status === 'ឌីជីថល' || item.status === 'ច្បាប់ដើម' ? 'bg-green-100 text-green-700' : item.status === 'បានខ្ចី' ? 'bg-yellow-100 text-yellow-700' : 'bg-slate-100 text-slate-700'}`}>{item.status}</span><button onClick={() => handleGetInsight(item)} className={`p-2 rounded-full transition-colors ${insightItem === item.id ? 'text-indigo-600 bg-indigo-100' : 'text-slate-400 hover:text-indigo-600 hover:bg-indigo-50'}`} title="AI Insight"><Brain size={18} /></button><button className="text-slate-400 hover:text-blue-600"><Settings size={18} /></button></div></div>{insightItem === item.id && (<div className="px-16 pb-4 bg-indigo-50 border-b border-indigo-100"><div className="bg-white p-4 rounded-lg border border-indigo-100 shadow-sm"><h5 className="text-xs font-bold text-indigo-600 uppercase mb-2 flex items-center"><Sparkles size={12} className="mr-1" /> AI ជំនួយការស្រាវជ្រាវ (AI Research Assistant)</h5>{isGeneratingInsight ? (<div className="flex items-center text-indigo-400 text-sm py-2"><Loader2 size={16} className="animate-spin mr-2" /> កំពុងវិភាគឯកសារ...</div>) : (<div className="text-sm text-slate-700 whitespace-pre-wrap leading-relaxed">{insightContent}</div>)}</div></div>)}</React.Fragment>))) : (<div className="p-8 text-center text-slate-500"><Folder size={48} className="mx-auto mb-3 text-slate-300" /><p>មិនមានឯកសារនៅក្នុងផ្នែកនេះទេ</p></div>)}</div></div></div>);
+};
+
+// Main App Component
+const App = () => {
+  const [activeTab, setActiveTab] = useState('dashboard');
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'dashboard': return <DashboardView />;
+      case 'schedule': return <ScheduleView />;
+      case 'gpa': return <GPACalculatorView />; 
+      case 'library': return <LibraryDocsView />; 
+      case 'reports': return <ReportsView />; // Added Reports View
+      case 'management': return <ManagementView />;
+      case 'staff': return <StaffView />; 
+      case 'teachers': return <TeachersView />; 
+      case 'payroll': return <PayrollView />; 
+      case 'academic': return <AcademicSystemView />;
+      case 'students': return <StudentsView />; 
+      case 'courses': return <CoursesView />; 
+      case 'finance': return <FinanceView />;
+      default:
+        return (
+          <div className="flex flex-col items-center justify-center h-64 text-slate-400">
+            <Settings size={48} className="mb-4" />
+            <p className="text-lg">កំពុងអភិវឌ្ឍន៍ ({activeTab})</p>
+          </div>
+        );
+    }
+  };
+
+  return (
+    <div className="flex h-screen bg-slate-100 font-sans">
+      <Sidebar 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        isMobileOpen={isMobileOpen}
+        setIsMobileOpen={setIsMobileOpen}
+      />
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <header className="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6 z-10">
+          <div className="flex items-center">
+             <button 
+                className="mr-4 text-slate-500 md:hidden"
+                onClick={() => setIsMobileOpen(true)}
+             >
+                <Menu size={24} />
+             </button>
+             <h1 className="text-lg font-bold text-slate-700 hidden md:block">
+               ប្រព័ន្ធគ្រប់គ្រងសាកលវិទ្យាល័យ
+             </h1>
+          </div>
+
+          <div className="flex items-center space-x-4">
+            <button className="relative p-2 text-slate-500 hover:bg-slate-100 rounded-full">
+              <Bell size={20} />
+              <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
+            </button>
+            <div className="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+               <div className="w-full h-full bg-blue-500 flex items-center justify-center text-white text-xs">AD</div>
+            </div>
+          </div>
+        </header>
+
+        <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+          {renderContent()}
+        </main>
+      </div>
+    </div>
+  );
+};
+
+export default App;
